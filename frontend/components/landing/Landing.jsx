@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 class Landing extends React.Component {
   constructor(props) {
     super(props);
@@ -15,17 +15,13 @@ class Landing extends React.Component {
               <nav className="nav">
                 <ul>
                   <li className="signup-link">
-                  <a href="#">SignUp</a>
+                  <Link to="/signup" > Sign Up </Link>
                   </li>
                   <li>
-                    <div className="login-btn">
-                    <a href="#">LogIn</a>
-                    </div>
+                  <Link to="/login" ><div className="login-btn">Login </div></Link>
                   </li>
                   <li>
-                    <div className="demo-btn">
-                    <a href="#">Demo</a>
-                    </div>
+                  <Link to="/demo" ><div className="demo-btn" >Demo </div> </Link>
                   </li>
                 </ul>
               </nav>
