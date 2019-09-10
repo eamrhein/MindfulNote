@@ -14,7 +14,7 @@ export const signup = (user) => (dispatch) => (
     .then((data) => dispatch(receiveCurrentUser(data)))
 );
 
-export const signin = (user) => (dispatch) => (
+export const login = (user) => (dispatch) => (
   sessionAPI.login(user)
     .then((data) => dispatch(receiveCurrentUser(data)))
 );
