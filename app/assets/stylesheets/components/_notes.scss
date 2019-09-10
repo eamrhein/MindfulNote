@@ -11,10 +11,12 @@
   list-style: none;
 
 }
+.sidebar-contents{
+  display: inline-flexbox
+}
 
 .sidebar li {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }

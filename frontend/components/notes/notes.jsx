@@ -7,33 +7,26 @@ class Notes extends React.Component {
     return(
       <div>
         <nav className="sidebar" >
-          <div className="main">
-            <li>
-              <a id="note" href="#">+</a>
-            </li>
-            <li>
-              <a href="#">O</a>
-            </li>
-            <li>
-              <a href="#">N</a>
-            </li>
-            <li>
-              <a href="#">|||</a>
-            </li>
-          </div>
-          <div>
-            <li>
-              <a href="#">+</a>
-            </li>
-            <li>
-              <a href="#">O</a>
-            </li>
-            <li>
-              <button onClick={() => this.props.logout()}>O</button>
-            </li>
-            <li>
-              <a href="#">|||</a>
-            </li>
+          <div className="sidebar-contents">
+            <div className="main">
+              <li>
+                <a id="note" href="#"><i class="fas fa-plus-circle"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-sticky-note"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-book"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-book-open"></i></a>
+              </li>
+            </div>
+            <div>
+              <li>
+                <button onClick={() => this.props.logout()}><i class="fas fa-sign-out-alt"></i></button>
+              </li>
+            </div>
           </div>
         </nav>
         <section className="notes">
