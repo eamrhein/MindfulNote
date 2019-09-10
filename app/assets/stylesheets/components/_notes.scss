@@ -1,0 +1,38 @@
+.sidebar {
+  height: 100%;
+  width: 60px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $softgrey;
+  overflow-x: hidden;
+  padding-top: 20px;
+  list-style: none;
+
+}
+
+.sidebar li {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black
+}
+
+.notes {
+  margin-left: 60px;
+  padding: 20px;
+}
+
+strong {
+  font-size: 11pt;
+}
+
+.main {
+  margin-bottom: 50%;
+}

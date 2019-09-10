@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -18,7 +19,14 @@ class SessionForm extends React.Component {
     const { submitForm } = this.props;
     const user = {user: this.state};
     submitForm(user);
-    this.props.history.push('/');
+  }
+  renderErrors() {
+    let errors = Object.values(this.props.errors);
+    return (
+      <div>
+        {errors}
+      </div>
+    );
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -32,16 +40,22 @@ class SessionForm extends React.Component {
     const { formType, link } = this.props;
     const { email, password } = this.state;
     return (
-      <div>
+      <div className="form-container">
+        <div className="form-head">
+          <div>
+            Logo
+          </div>
+          <div>
+            <h1>Mindfull Note</h1>
+            <p>Be mindfull of important things.</p>
+          </div>
         <form onSubmit={this.handleSubmit}>
-          <span>
-            Please {formType} or {link}
-          </span>
           <div>
             <br />
             <label>
-              email:
               <input
+                className="session-input"
+                placeholder="Email"
                 type="text"
                 value={email}
                 onChange={this.handleUpdate('email')}
@@ -49,17 +63,26 @@ class SessionForm extends React.Component {
             </label>
             <br />
             <label>
-              Password:
               <input
+                placeholder="Password"
+                className="session-input"
                 type="password"
                 value={password}
                 onChange={this.handleUpdate('password')}
               />
             </label>
             <br />
-            <input type="submit" value={formType} />
+            <input className="form-btn" type="submit" value="Continue" />
           </div>
         </form>
+        <div className="form-footer">
+          By creating an account, you are agreeing to our Terms of Service and Privacy Policy.
+          <br />
+            <span>
+              Already have a {formType} please {link}!
+            </span>
+        </div>
+        </div>
       </div>
     );
   }

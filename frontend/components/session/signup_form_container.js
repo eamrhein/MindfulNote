@@ -7,8 +7,8 @@ import { signup } from '../../actions/session_actions';
 
 const mapSTP = ({ errors }) => ({
   errors: errors.session,
-  formType: 'login',
-  link: <Link to="/signup"> Sign Up </Link>,
+  formType: 'Sign Up',
+  link: <Link to="/login"> Log In </Link>,
 });
 
 const mapDTP = (dispatch) => ({
