@@ -1,8 +1,9 @@
 .strip {
+  padding: 20px;
   font-size: 30pt;
   display: flex;
   align-items: center;
-  height: 150px;
+  height: 100px;
   color: $white;
   background-color: $darkgrey;
 }
@@ -14,6 +15,7 @@
   background-color: $mainblue;
   height: 600px;
   color: $white;
+  padding: 20px;
 }
 
 .poster-text > h1 {

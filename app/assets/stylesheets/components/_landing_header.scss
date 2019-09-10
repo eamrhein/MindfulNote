@@ -3,7 +3,7 @@
   top: 0px
   height 130px;
   background-color: $white;
-  padding-top: 2%;
+  padding-top: 4%;
   padding-bottom: 2%;
   padding-left: 3%;
   padding-right: 3%;
@@ -57,6 +57,7 @@
   border-radius: 3px;
   transition: color 0.2s, border-color 1s, ease-in-out;
 }
+.demo-btn:hover,
 .login-btn:hover {
   color:white;
   background-color: $mainblue;

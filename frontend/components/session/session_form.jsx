@@ -22,10 +22,11 @@ class SessionForm extends React.Component {
   }
   renderErrors() {
     let errors = Object.values(this.props.errors);
+    errors = errors.map((error) => <li>{error}</li>)
     return (
-      <div>
+      <ul className="error">
         {errors}
-      </div>
+      </ul>
     );
   }
 
@@ -42,13 +43,15 @@ class SessionForm extends React.Component {
     return (
       <div className="form-container">
         <div className="form-head">
-          <div>
-            Logo
+          <div className="form-logo">
+            <i className="fas fa-brain"></i>
           </div>
           <div>
-            <h1>Mindfull Note</h1>
+            <h1>Mindfull </h1>
+            <h1> Note</h1>
             <p>Be mindfull of important things.</p>
           </div>
+          {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
           <div>
             <br />
@@ -78,8 +81,11 @@ class SessionForm extends React.Component {
         <div className="form-footer">
           By creating an account, you are agreeing to our Terms of Service and Privacy Policy.
           <br />
+          <br />
+          <br />
             <span>
-              Already have a {formType} please {link}!
+              Already have a {formType}
+              <div>Please {link}!</div>
             </span>
         </div>
         </div>

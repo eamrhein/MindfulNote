@@ -11,7 +11,7 @@ class Api::UsersController < ApplicationController
       render "api/users/show"
     else
       flash.now[:errors] = @user.errors
-      render @user.errors
+      render json: @user.errors.full_messages, status: 401
     end
   end
 end

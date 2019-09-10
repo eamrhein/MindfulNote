@@ -15,7 +15,7 @@ class Landing extends React.Component {
               <nav className="nav">
                 <ul>
                   <li className="signup-link">
-                  <Link to="/signup" > Sign Up </Link>
+                  <Link to="/signup" > Sign up </Link>
                   </li>
                   <li>
                   <Link to="/login" ><div className="login-btn">Login </div></Link>
