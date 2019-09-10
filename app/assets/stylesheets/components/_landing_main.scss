@@ -1,0 +1,30 @@
+.strip {
+  font-size: 30pt;
+  display: flex;
+  align-items: center;
+  height: 150px;
+  color: $white;
+  background-color: $darkgrey;
+}
+
+.poster {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $mainblue;
+  height: 600px;
+  color: $white;
+}
+
+.poster-text > h1 {
+  font-size: 42pt;
+  line-height: 1.2em;
+}
+.poster-text > h4 {
+  font-size: 18pt;
+  font-weight: 200;
+}
+.poster-img > img {
+  width: auto;
+  max-width: 600px;
+}

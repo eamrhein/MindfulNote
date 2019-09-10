@@ -1,0 +1,63 @@
+.landing-head{
+  position: sticky;
+  top: 0px
+  height 130px;
+  background-color: $white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: inherit;
+}
+
+.signup-link{
+  color: $mainblue;
+  font-size: 14pt;
+  transition: color .2s ease-in-out;
+}
+.signup-link:hover{
+  color: $softerblue;
+}
+.logo{
+  font-size: 34pt;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.nav{
+  margin-left: 50px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li {
+      margin-left: 20px;
+    }
+  }
+}
+
+.demo-btn,
+.login-btn {
+  min-width: 100px;
+  text-align: center;
+  font-size: 14pt;
+  color: $mainblue;
+  font-weight: 600;
+  padding: 10px 30px;
+  border: 2px solid $mainblue;
+  border-radius: 3px;
+  transition: color 0.2s, border-color 1s, ease-in-out;
+}
+.login-btn:hover {
+  color:white;
+  background-color: $mainblue;
+}
