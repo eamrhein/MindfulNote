@@ -36,6 +36,11 @@ class SessionForm extends React.Component {
       [formField]: e.currentTarget.value,
     });
   }
+  componentDidMount(){
+    if (this.props.formType === 'demo') {
+      this.setState(this.props.demoLogin)
+    };
+  }
 
   render() {
     const { formType, link } = this.props;

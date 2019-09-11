@@ -10,21 +10,21 @@ class Notes extends React.Component {
           <div className="sidebar-contents">
             <div className="main">
               <li>
-                <a id="note" href="#"><i class="fas fa-plus-circle"></i></a>
+                <a id="note" href="#"><i className="fas fa-plus-circle"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-sticky-note"></i></a>
+                <a href="#"><i className="fas fa-sticky-note"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-book"></i></a>
+                <a href="#"><i className="fas fa-book"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-book-open"></i></a>
+                <a href="#"><i className="fas fa-book-open"></i></a>
               </li>
             </div>
             <div>
               <li>
-                <button onClick={() => this.props.logout()}><i class="fas fa-sign-out-alt"></i></button>
+                <button onClick={() => this.props.logout()}><i className="fas fa-sign-out-alt"></i></button>
               </li>
             </div>
           </div>
