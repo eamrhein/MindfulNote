@@ -1,9 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
   entry: './frontend/mindfullnote.jsx',
-  watch: true,
   output: {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js',
