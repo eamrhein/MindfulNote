@@ -37,7 +37,7 @@ class Landing extends React.Component {
               <h4>Take notes anywhere. Find information faster. Share ideas with anyone. Meeting notes, web pages, projects, to-do lists—with Evernote as your note taking app, nothing falls through the cracks.</h4>
             </div>
             <div className="poster-img">
-              <img src="/assets/landing_page/homepage-hero-desktop.png" />
+              <img src={window.heroIMG} />
             </div>
           </div>
         </section>

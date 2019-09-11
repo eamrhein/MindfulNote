@@ -19,6 +19,7 @@
   padding: 20px;
 }
 
+
 .poster-text > h1 {
   font-size: 42pt;
   line-height: 1.2em;
@@ -30,4 +31,6 @@
 .poster-img > img {
   width: auto;
   max-width: 600px;
+  z-index: 3;
+
 }
