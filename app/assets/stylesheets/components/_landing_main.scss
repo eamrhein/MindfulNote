@@ -10,7 +10,7 @@
 
 .poster {
   display: flex;
-  background-image: url('images/landing_page/landing-background.png');
+  background-image: image-url('landing_page/landing-background.png');
   justify-content: space-around;
   align-items: center;
   background-color: $mainblue;
