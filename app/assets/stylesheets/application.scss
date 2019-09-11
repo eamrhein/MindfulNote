@@ -12,9 +12,9 @@
  *
  *= require_self
  */
- 
+
 /* css reset */
-   @import './main/reset.css';
+  @import './main/reset.scss';
 /* styling */
   @import './main/colors.scss';
   @import "font-awesome-sprockets";
