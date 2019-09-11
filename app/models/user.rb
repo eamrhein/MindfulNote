@@ -7,6 +7,7 @@
 #  password_digest :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  session_token   :string
 #
 class User < ApplicationRecord
   attr_reader :password
@@ -14,6 +15,14 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   after_initialize :ensure_token
+
+  has_many :notes,
+  foreign_key: :author_id,
+  class_name: "Note"
+
+  has_many :notebooks,
+  foreign_key: :author_id,
+  class_name: "Notebook"
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
