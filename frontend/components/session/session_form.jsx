@@ -22,7 +22,7 @@ class SessionForm extends React.Component {
   }
   renderErrors() {
     let errors = Object.values(this.props.errors);
-    errors = errors.map((error) => <li>{error}</li>)
+    errors = errors.map((error, i) => <li key={i} >{error}</li>)
     return (
       <ul className="error">
         {errors}
@@ -40,6 +40,9 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'demo') {
       this.setState(this.props.demoLogin)
     };
+  }
+  componentWillUnmount(){
+    this.props.clearErrors()
   }
 
   render() {

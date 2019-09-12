@@ -1,0 +1,50 @@
+.notes-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 70px;
+  z-index: 5;
+  background-color: $softgrey;
+  padding: 10px;
+  .notes-navbar-wrapper{
+    width: 40px;
+    .icon-wrapper {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0px;
+      color: $mainblue;
+      border-radius: 50%;
+      position: relative;
+      overflow: visible;
+      cursor: pointer;
+      text-align: center;
+      .fas {
+        margin: auto;
+        width: fit-content;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .icon-wrapper:hover {
+      background-color: $mainblue;
+      color: $white;
+    }
+    .fa-brain{
+      padding-top: 10px;
+      color: $graytext;
+      font-size: 25pt;
+    }
+  }
+
+}
+  .notes-navbar-wrapper:last-child {
+    height: 30%;
+
+    .icon-wrapper {
+      position: absolute;
+      width: inherit;
+      bottom: 0;
+    }
+  }
