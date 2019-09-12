@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-
-
+import NoteIndexItem from './notes_index_item'
 class NotesIndex extends React.Component {
 
   componentDidMount() {
@@ -11,13 +10,26 @@ class NotesIndex extends React.Component {
   }
 
   render() {
-    let { notes } = this.props;
+    let { notes, receiveNote } = this.props;
     notes = Object.values(notes)
-      .map((note) => <li key={note.id}>{note.title}</li>)
+      .map((note) =>  <NoteIndexItem
+                        className="note"
+                        key={note.id}
+                        note={note}
+                        receiveNote={receiveNote}
+                      /> )
     return(
-      <ul>
-        {notes}
-      </ul>
+      <div className="notes-index-wrapper">
+        <div className="notes-index-title">
+          <h1>Notes</h1>
+          <div>
+            <p>{notes.length} notes</p>
+          </div>
+        </div>
+        <div className="note-index-items">
+          {notes}
+        </div>
+      </div>
     );
   }
 }
