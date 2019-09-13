@@ -1,7 +1,7 @@
 .notes-index-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: $white;
+  background-color: $softgrey;
   border: 1px solid $border;
   width: 345px;
   min-width: 345px;
@@ -23,7 +23,7 @@
   }
   .note-index-item {
     box-sizing: border-box;
-    border: 0.5px solid $softgrey;
+    border: 0.5px solid $border;
     border-top-width: 0px;
     border-left-width: 0px;
     height: 120px;
