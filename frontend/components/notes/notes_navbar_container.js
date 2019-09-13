@@ -1,18 +1,17 @@
 import { connect } from 'react-redux';
 import NotesNavbar from './notes_navbar';
 import { logout } from '../../actions/session_actions';
+import { createNote } from '../../actions/note_actions';
 
 
-const mapStateToProps = state => {
-  return {
-    notes: state.entities.notes,
-  };
-};
+const mapStateToProps = (state) => ({
+  notes: state.entities.notes,
+})
 
-const mapDispatchToProps = dispatch => {
-  return {
-    logout: () => dispatch(logout()),
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  logout: () => dispatch(logout()),
+  createNote: () => dispatch(createNote({ note: { title: '_', body: '_' } })),
+});
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(NotesNavbar);

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const navBar = ({logout}) => {
+const navBar = ({logout, createNote }) => {
 
   return(
     <nav className="notes-navbar">
@@ -9,17 +9,11 @@ const navBar = ({logout}) => {
       </div>
 
       <div className="notes-navbar-wrapper">
-        <div className="new-note icon-wrapper">
+        <div
+          className="new-note icon-wrapper"
+          onClick={() => createNote()}
+        >
             <i className="fas fa-plus"></i>
-        </div>
-        <div className="new-note icon-wrapper">
-          <i className="fas fa-plus"></i>
-        </div>
-        <div className="new-note icon-wrapper">
-          <i className="fas fa-plus"></i>
-        </div>
-        <div className="new-note icon-wrapper">
-          <i className="fas fa-plus"></i>
         </div>
       </div>
 

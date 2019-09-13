@@ -32,18 +32,26 @@ class NoteDetailForm extends React.Component {
   render(){
     const { title, body } = this.state;
     return(
-      <form onKeyUp={() => this.handleSubmit()}>
-        <input
-          type="text"
-          value={title}
-          onChange={this.change('title')
-        }
-        />
-        <textarea
-          value={body}
-          onChange={this.change('body')}
+      <div className="note-form-wrapper">
+        <form
+        onKeyUp={() => this.handleSubmit()}
+        onClick={() => this.handleSubmit()}
+        className="note-form"
+        >
+          <input
+            className="form-title"
+            type="text"
+            value={title}
+            onChange={this.change('title')
+            }
           />
-      </form>
+          <textarea
+            className="form-body"
+            value={body}
+            onChange={this.change('body')}
+          />
+        </form>
+      </div>
     );
   }
 }
