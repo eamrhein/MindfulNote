@@ -3,7 +3,8 @@
   flex-direction: column;
   background-color: $white;
   border: 1px solid $border;
-  width: 350px;
+  width: 345px;
+  min-width: 345px;
   color: $softergrey;
   .notes-index-title{
     font-weight: 500;

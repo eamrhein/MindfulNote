@@ -45,11 +45,13 @@ class NoteDetailForm extends React.Component {
             onChange={this.change('title')
             }
           />
-          <textarea
-            className="form-body"
-            value={body}
-            onChange={this.change('body')}
-          />
+          <div className="body-wrapper">
+            <textarea
+              className="form-body"
+              value={body}
+              onChange={this.change('body')}
+            />
+          </div>
         </form>
       </div>
     );
