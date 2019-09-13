@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
-  createNote: () => dispatch(createNote({ note: { title: '_', body: '_' } })),
+  createNote: () => dispatch(createNote({ note: { title: 'New note', body: '...' } })),
 });
 
 
