@@ -3,16 +3,16 @@
 # Table name: notes
 #
 #  id          :bigint           not null, primary key
-#  title       :string           not null
-#  body        :string           not null
 #  notebook_id :integer          not null
 #  author_id   :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  title       :string
+#  body        :string
 #
 
 class Note < ApplicationRecord
-  validates :title, :body, :notebook_id, :author_id, presence: true
+  validates :notebook_id, :author_id, presence: true
   belongs_to :notebook
 
   belongs_to :author,

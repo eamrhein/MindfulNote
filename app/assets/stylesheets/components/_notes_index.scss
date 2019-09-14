@@ -7,12 +7,20 @@
   min-width: 345px;
   color: $softergrey;
   .notes-index-title{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
     font-weight: 500;
     border-bottom: 3px solid $border;
-    padding: 20px;
+    padding: 15px;
+    font-size: 10pt;
+    font-weight: 200;
     h1 {
-      text-transform: uppercase;
+      text-transform: capitalize;
+      font-weight: 400;
       font-size: 21px;
+      color: $darkgrey;
       margin-bottom: 10px;
     }
 
@@ -42,11 +50,11 @@
       cursor: pointer;
     }
     .time-since{
-      text-transform: uppercase;
-      font-weight: 800;
+      text-transform: capitalize;
+      font-weight: 300;
       font-size: 9pt;
-      margin-top: 3px;
-      margin-bottom: 3px;
+      margin-top: 6px;
+      margin-bottom: 6px;
     }
   }
       .note-index-item:focus,

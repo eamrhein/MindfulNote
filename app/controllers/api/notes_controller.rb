@@ -7,7 +7,6 @@ class Api::NotesController < ApplicationController
     if @note.save
       render :show
     else
-      debugger
       render json: @note.errors.full_messages, status: 403
     end
   end

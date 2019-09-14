@@ -17,7 +17,7 @@ class NotesIndex extends React.Component {
     return(
       <div className="notes-index-wrapper">
         <div className="notes-index-title">
-          <h1>Notes</h1>
+          <h1>All Notes</h1>
           <div>
             <p>{notes.length} notes</p>
           </div>

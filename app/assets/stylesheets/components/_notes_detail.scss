@@ -1,31 +1,28 @@
 .note-form-wrapper{
-  display: flex;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   padding: 20px;
 }
-
+.note-form {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
 .form-title {
   display: table-row;
   width: 100%;
-  font-size: 40pt;
-  border-bottom: 1px solid $border;
-}
-.note-form {
-  height: 100%;
-  width: 100%;
-  display: table;
-}
-.body-wrapper {
-  display: table-row;
-  height: 100%;
+  padding: 10px;
+  font-size: 28pt;
+  font-weight: 300;
 }
 
 .form-body {
-  display: inline-block;
+  display: table-row;
   width: 100%;
   height: 100%;
-  vertical-align: top;
-  resize: none;
+}
+.ql-editor{
+  min-height: 100px !important;
+  max-height: 78vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
