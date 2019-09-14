@@ -15,9 +15,8 @@ class NoteDetailForm extends React.Component {
       })
     )
   }
-
   componentDidUpdate(prevProps){
-    if(prevProps.note.title !== this.props.note.title){
+    if(prevProps.note.id !== this.props.note.id){
       this.setState(this.props.note)
     }
   }
@@ -30,6 +29,7 @@ class NoteDetailForm extends React.Component {
   }
 
   render(){
+    if (!this.props.note) return null
     const { title, body } = this.state;
     return(
       <div className="note-form-wrapper">

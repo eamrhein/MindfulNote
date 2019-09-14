@@ -1,17 +1,17 @@
 
 import { connect } from 'react-redux';
 import Notes from './notes';
-import { logout } from '../../actions/session_actions';
-import { fetchNotes } from '../../actions/note_actions';
+import { fetchNotes,  receiveNote } from '../../actions/note_actions';
 
 const mapSTP = (state) => ({
   user: state.entities.users[state.session.id],
   notes: state.entities.notes,
+  loading: state.ui.loading,
 });
 
 const mapDTP = (dispatch) => ({
-  logout: () => dispatch(logout()),
   fetchNotes: () => dispatch(fetchNotes()),
+  receiveNote: (note) => dispatch(receiveNote(note)),
 });
 
 export default connect(mapSTP, mapDTP)(Notes);

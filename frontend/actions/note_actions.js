@@ -4,6 +4,7 @@ import * as noteApi from '../util/noteApiUtil';
 export const RECEIVE_ALL_NOTES = 'RECEIVE_ALL_NOTES';
 export const RECEIVE_NOTE = 'RECEIVE_NOTE';
 export const REMOVE_NOTE = 'REMOVE_NOTE';
+export const START_LOADING_ALL_NOTES = 'START_LOADING_ALL_NOTES';
 
 export const receiveALLnotes = (notes) => ({
   type: RECEIVE_ALL_NOTES,
@@ -20,10 +21,16 @@ export const receiveNote = (note) => ({
   note,
 });
 
-export const createNote = (note) => (dispatch) => (
-  noteApi.createNote(note)
+const startLoadingAllNotes = () => {
+  return {
+    type: START_LOADING_ALL_NOTES,
+  };
+};
+
+export const createNote = (note) => (dispatch) => {
+  return noteApi.createNote(note)
     .then((slug) => dispatch(receiveNote(slug)))
-);
+};
 
 export const deleteNote = (id) => (dispatch) => (
   noteApi.deleteNote(id)
@@ -35,10 +42,11 @@ export const updateNote = (note) => (dispatch) => (
     .then((slug) => dispatch(receiveNote(slug)))
 );
 
-export const fetchNotes = ( ) => (dispatch) => (
-  noteApi.fetchNotes()
+export const fetchNotes = ( ) => (dispatch) => {
+  dispatch(startLoadingAllNotes());
+  return noteApi.fetchNotes()
     .then((slug) => dispatch(receiveALLnotes(slug)))
-);
+};
 
 export const fetchNote = (id) => (dispatch) => (
   noteApi.fetchNote(id)
