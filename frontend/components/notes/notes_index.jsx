@@ -4,19 +4,15 @@ import React from 'react';
 import NoteIndexItem from './notes_index_item'
 class NotesIndex extends React.Component {
 
-  componentDidMount() {
-    const { fetchNotes } = this.props;
-    fetchNotes();
-  }
-
   render() {
-    let { notes, receiveNote } = this.props;
+    let { notes, receiveNote, deleteNote } = this.props;
     notes = Object.values(notes)
-      .map((note) =>  <NoteIndexItem
+     notes = notes.map((note) =>  <NoteIndexItem
                         className="note"
                         key={note.id}
                         note={note}
                         receiveNote={receiveNote}
+                        deleteNote = {deleteNote}
                       /> )
     return(
       <div className="notes-index-wrapper">

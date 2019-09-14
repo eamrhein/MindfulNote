@@ -33,6 +33,21 @@
       display: inline-block;
       font-weight: 600;
     }
+    .item-header{
+      display: flex;
+      justify-content: space-between;
+    }
+    .fa-trash-alt:hover{
+      font-size: 14pt;
+      cursor: pointer;
+    }
+    .time-since{
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 9pt;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
   }
       .note-index-item:focus,
       .note-index-item:hover {
