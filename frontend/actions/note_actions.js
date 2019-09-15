@@ -21,15 +21,13 @@ export const receiveNote = (note) => ({
   note,
 });
 
-const startLoadingAllNotes = () => {
-  return {
-    type: START_LOADING_ALL_NOTES,
-  };
-};
+const startLoadingAllNotes = () => ({
+  type: START_LOADING_ALL_NOTES,
+});
 
 export const createNote = (note) => (dispatch) => {
-  return noteApi.createNote(note)
-    .then((slug) => dispatch(receiveNote(slug)))
+  noteApi.createNote(note)
+    .then((slug) => dispatch(receiveNote(slug)));
 };
 
 export const deleteNote = (id) => (dispatch) => (
@@ -42,10 +40,10 @@ export const updateNote = (note) => (dispatch) => (
     .then((slug) => dispatch(receiveNote(slug)))
 );
 
-export const fetchNotes = ( ) => (dispatch) => {
+export const fetchNotes = () => (dispatch) => {
   dispatch(startLoadingAllNotes());
   return noteApi.fetchNotes()
-    .then((slug) => dispatch(receiveALLnotes(slug)))
+    .then((slug) => dispatch(receiveALLnotes(slug)));
 };
 
 export const fetchNote = (id) => (dispatch) => (

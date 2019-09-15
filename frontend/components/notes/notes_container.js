@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import Notes from './notes';
-import { fetchNotes,  receiveNote } from '../../actions/note_actions';
+import { fetchNotes, receiveNote } from '../../actions/note_actions';
 
 const mapSTP = (state) => ({
   user: state.entities.users[state.session.id],

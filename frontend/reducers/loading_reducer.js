@@ -5,9 +5,9 @@ import {
 } from '../actions/note_actions';
 
 
-const _nullLoading = true;
+const nullLoading = true;
 
-const loadingReducer = (state = _nullLoading, action) => {
+const loadingReducer = (state = nullLoading, action) => {
   Object.freeze(state);
 
   switch (action.type) {

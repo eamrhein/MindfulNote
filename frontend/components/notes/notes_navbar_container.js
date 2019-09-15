@@ -7,7 +7,7 @@ import { createNote } from '../../actions/note_actions';
 const mapStateToProps = (state) => ({
   notes: state.entities.notes,
   user: state.entities.users[state.session.id],
-})
+});
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),

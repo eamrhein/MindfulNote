@@ -2,8 +2,7 @@
 // https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
 
 export const timeSince = (date) => {
-
-  const seconds = Math.floor((new Date() - Date.parse(date)) / 1000);
+  const seconds = Math.floor((Date.now() - Date.parse(date)) / 1000);
 
   let interval = Math.floor(seconds / 31536000);
 
@@ -27,4 +26,4 @@ export const timeSince = (date) => {
     return `${interval} minutes`;
   }
   return `${Math.floor(seconds)} seconds`;
-}
+};

@@ -6,7 +6,7 @@ import {
 
 const notesReducer = (state = {}, action) => {
   Object.freeze(state);
-  let nState = { ...state };
+  const nState = { ...state };
   switch (action.type) {
     case RECEIVE_ALL_NOTES:
       return action.notes;
@@ -19,6 +19,6 @@ const notesReducer = (state = {}, action) => {
     default:
       return state;
   }
-}
+};
 
 export default notesReducer;

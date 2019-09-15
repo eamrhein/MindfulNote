@@ -1,11 +1,12 @@
-import React from "react";
-import {Route, Switch, Redirect} from 'react-router-dom'
+import React from 'react';
+import { Switch, Redirect } from 'react-router-dom'
 import LandingContainer from './landing/landing_container';
 import LoginForm from './session/login_form_container';
 import SignUpForm from './session/signup_form_container';
 import DemoLoginContainer from './session/demo_login_container';
 import NotesContainer from './notes/notes_container';
 import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+
 const App = () => (
   <div>
     <Switch>

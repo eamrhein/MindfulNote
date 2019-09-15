@@ -8,7 +8,7 @@ import { login, clearErrors } from '../../actions/session_actions';
 const mapSTP = ({ errors }) => ({
   errors: errors.session,
   formType: 'demo',
-  demoLogin: { email: "demo@demo.com", password:"123456"},
+  demoLogin: { email: 'demo@demo.com', password: '123456' },
   link: <Link className="link" to="/signup"> Create Account </Link>,
 });
 
