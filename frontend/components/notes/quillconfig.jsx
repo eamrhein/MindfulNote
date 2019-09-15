@@ -18,11 +18,14 @@ const modules = {
   toolbar,
 };
 
-const QuillConfig = ({ value, onChange }) => (
+const QuillConfig = ({ value, onChange, className, onFocus, onKeyUp}) => (
   <ReactQuill
+    className={className}
     value={value}
     modules={modules}
     onChange={onChange}
+    onKeyUp={onKeyUp}
+    onFocus={onFocus}
     placeholder="Start Writing"
   />
 );

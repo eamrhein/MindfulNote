@@ -17,9 +17,12 @@ class NoteDetailForm extends React.Component {
       body,
       id,
       notebookId,
+      focus: false,
     };
     this.timeout = 0;
     this.handleBodyChange = this.handleBodyChange.bind(this);
+    this.focus = this.focus.bind(this);
+    this.unfocus = this.unfocus.bind(this);
   }
 
   // static getDerivedStateFromProps(props, state) {
@@ -36,6 +39,7 @@ class NoteDetailForm extends React.Component {
       this.setState(note);
     }
   }
+
 
   handleBodyChange(value) {
     this.setState({ body: value });
@@ -57,27 +61,42 @@ class NoteDetailForm extends React.Component {
     }, 2000);
   }
 
+  focus() {
+    this.setState({ focus: true });
+  }
+
+  unfocus() {
+    this.setState({ focus: false });
+  }
+
   render() {
-    const { title, body } = this.state;
+    const { title, body, focus } = this.state;
     return (
       <div className="note-form-wrapper">
-        <form
-          className="note-form"
-          onKeyUp={() => this.handleSubmit()}
-          onClick={() => this.handleSubmit()}
-        >
+        <form className="note-form">
           <input
             className="form-title"
             type="text"
             placeholder="Title"
             value={title || ''}
             onChange={this.change('title')}
+            onClick={() => {
+              this.unfocus();
+              this.handleSubmit();
+            }}
+            onKeyUp={() => this.handleSubmit()}
           />
-          <div className="form-body">
+          <div className={focus ? 'form-body focused-editor' : 'form-body blurred-editor'}>
             <QuillConfig
               value={body || ''}
               onChange={this.handleBodyChange}
               theme="snow"
+              onClick={() => {
+                this.handleSubmit();
+                this.focus();
+              }}
+              onKeyUp={() => this.handleSubmit()}
+              onFocus={() => this.focus()}
             />
           </div>
         </form>
