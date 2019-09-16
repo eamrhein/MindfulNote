@@ -7,12 +7,15 @@ const navBar = ({
 }) => {
   let notebookList = Object.values(notebooks);
   notebookList = notebookList.map((notebook) => (
-    <li className="middle item-wrapper notebooks-nav" key={notebook.id}>
-      <Link to={`/notebooks/${notebook.id}`}>
-        {notebook.title}
-      </Link>
-    </li>
+    <Link to={`/notebooks/${notebook.id}`}>
+      <li className=" middle item-wrapper" key={notebook.id}>
+        <div className="notebooks-nav">
+          {notebook.title}
+        </div>
+      </li>
+    </Link>
   ));
+
   let defaultNote;
   if (currentNotebook) {
     defaultNote = {
@@ -51,15 +54,19 @@ const navBar = ({
         </li>
       </ul>
       <ul className="notes-navbar-wrapper">
-        <li className="middle item-wrapper outer ">
-          <i className="fas fa-file-alt" />
-          <Link to="/notes">All Notes</Link>
+        <Link to="/notes">
+          <li className="middle item-wrapper outer ">
+            <i className="fas fa-file-alt" />
+            All Notes
         </li>
-        <li className="middle item-wrapper">
-          <i className="fas fa-caret-down" />
-          <i className="fas fa-book" />
-          <Link to="/notebooks">Notebooks</Link>
-        </li>
+        </Link>
+        <Link to="/notebooks">
+          <li className="middle item-wrapper">
+            <i className="fas fa-caret-down" />
+            <i className="fas fa-book" />
+            Notebooks
+          </li>
+        </Link>
         <ul>
           {notebookList}
         </ul>
