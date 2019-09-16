@@ -1,14 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import NotebookIndexItem from './notebook_index_item';
 
-const notebookIndex = ({ notebooks, openModal }) => {
+const notebookIndex = ({ notebooks, openModal, deleteNotebook, user }) => {
   let notebookList = Object.values(notebooks);
   notebookList = notebookList.map((notebook) => (
-    <tr key={notebook.id}>
-      <td>{notebook.title}</td>
-      <td>Demo</td>
-      <td>{Date.now()}</td>
-    </tr>
+    <NotebookIndexItem
+      user={user}
+      key={notebook.id}
+      notebook={notebook}
+      deleteNotebook={deleteNotebook}
+    />
   ));
 
   return (

@@ -1,5 +1,4 @@
 import * as notebookAPI from '../util/notebook_api_util';
-import { REMOVE_NOTE } from './note_actions';
 
 export const RECEIVE_ALL_NOTEBOOKS = 'RECEIVE_ALL_NOTEBOOKS';
 export const RECEIVE_NOTEBOOK = 'RECEIVE_NOTEBOOK';
@@ -16,13 +15,13 @@ export const receiveNotebook = (notebook) => ({
 });
 
 export const removeNotebook = (notebook) => ({
-  type: REMOVE_NOTE,
+  type: REMOVE_NOTEBOOK,
   notebook,
 });
 
 export const createNotebook = (notebook) => (dispatch) => (
   notebookAPI.createNotebook(notebook)
-    .then((slug) => dispatch(receiveAllnotebooks(slug)))
+    .then((slug) => dispatch(receiveNotebook(slug)))
 );
 
 export const deleteNotebook = (id) => (dispatch) => (

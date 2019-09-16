@@ -20,7 +20,7 @@ export const createNotebook = (notebook) => (
 
 export const deleteNotebook = (id) => (
   $.ajax({
-    url: `api/nootebooks/${id}`,
+    url: `api/notebooks/${id}`,
     method: 'DELETE',
   })
 );

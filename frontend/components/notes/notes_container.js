@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import Notes from './notes';
-import { fetchNotes, receiveNote } from '../../actions/note_actions';
+import { fetchNotes, receiveNote, createNote } from '../../actions/note_actions';
 import { fetchNotebooks } from '../../actions/notebook_actions';
 
 const mapSTP = (state) => ({
@@ -14,6 +14,7 @@ const mapDTP = (dispatch) => ({
   fetchNotes: () => dispatch(fetchNotes()),
   fetchNotebooks: () => dispatch(fetchNotebooks()),
   receiveNote: (note) => dispatch(receiveNote(note)),
+  createNote: () => dispatch(createNote({ note: { title: '', body: '' } })),
 });
 
 export default connect(mapSTP, mapDTP)(Notes);

@@ -28,9 +28,12 @@ class Api::NotebooksController < ApplicationController
 
   def destroy
     @notebook = Notebook.find(params[:id])
-    @notebook.destroy
-
-    render :show
+    if @notebook.title != current_user.email
+      @notebook.destroy
+      render :show
+    else
+      render json: ["can't delete base notebook"], status: 403
+    end
   end
 
   private
