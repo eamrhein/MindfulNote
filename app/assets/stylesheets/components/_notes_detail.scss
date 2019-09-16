@@ -4,8 +4,6 @@
 }
 .note-form {
   display: table;
-  height: 100%;
-  width: 100%;
 }
 .form-title {
   display: table-row;
@@ -14,20 +12,9 @@
   font-size: 28pt;
   font-weight: 300;
 }
-
-.form-body {
-  display: table-row;
-  width: 100%;
-  height: 100%;
-}
 .ql-editor{
-  width: 66.6vw;
-  min-height: 100px !important;
-  max-height: 78vh;
-  overflow: hidden;
-  overflow-y: scroll;
+  height: calc(100vh - 200px);
 }
-
 div.blurred-editor div.ql-toolbar {
   visibility: hidden;
   opacity: 0;
