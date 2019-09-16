@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import NotebooksIndex from './notebooks_index';
-import { openModal } from '../../actions/modal_actions';
-import { deleteNotebook } from '../../actions/notebook_actions';
+import { openModal } from '../../../actions/modal_actions';
+import { deleteNotebook } from '../../../actions/notebook_actions';
 
 const mapSTP = (state) => ({
   notebooks: state.entities.notebooks,

@@ -16,7 +16,8 @@
 /* css reset */
   @import './main/reset';
 /* styling */
-  @import './main/quill.snow.scss';
+  @import './main/basic';
+  @import './main/quill.snow';
   @import './main/colors';
   @import "font-awesome-sprockets";
   @import "font-awesome";

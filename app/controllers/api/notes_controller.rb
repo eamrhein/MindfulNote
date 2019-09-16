@@ -3,7 +3,7 @@ class Api::NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
     @note.author_id = current_user.id
-    @note.notebook_id = current_user.notebooks.first.id
+    @note.notebook_id = current_user.notebooks.first.id unless @note.notebook_id
     if @note.save
       render :show
     else

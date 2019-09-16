@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import CreateNotebookContaine from '../notebooks/create_notebook_container';
+import CreateNotebookContainer from '../notebooks/create_notebook/create_notebook_container';
 
 const Modal = ({ modal, closeModal }) => {
   switch (modal) {
@@ -14,7 +14,7 @@ const Modal = ({ modal, closeModal }) => {
           onClick={closeModal}
         >
           <div className="modal-fg" onClick={(e) => e.stopPropagation()}>
-            <CreateNotebookContaine />
+            <CreateNotebookContainer />
           </div>
         </div>
       );

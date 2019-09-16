@@ -1,0 +1,55 @@
+.create-notebook {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  height: 100%;
+  justify-content: space-between;
+  .create-nb-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    display: block;
+    font-size: 18pt;
+    font-weight: 100;
+  }
+  input {
+    width: 100%;
+    border: 1px solid $selectedborder;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hidden {
+    display: none;
+  }
+  .create-btns {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    .create-notebook-btn {
+      border: none;
+      color: $softergrey ;
+      border-radius: 7px;
+      margin-right: 20px;
+      padding: 10px 15px;
+      font-size: 12pt;
+      font-weight: 500;
+      text-align: center;
+      -webkit-appearance: button;
+      cursor: pointer;
+
+    }
+    .submit {
+      color: $white;
+      color :white;
+      background-color: $mainblue;
+      border: none;
+    }
+  }
+}
