@@ -1,19 +1,21 @@
 import React from 'react';
-import { Switch, Redirect } from 'react-router-dom'
+import { Switch, Redirect } from 'react-router-dom';
 import LandingContainer from './landing/landing_container';
 import LoginForm from './session/login_form_container';
 import SignUpForm from './session/signup_form_container';
 import DemoLoginContainer from './session/demo_login_container';
 import NotesContainer from './notes/notes_container';
-import { AuthRoute, ProtectedRoute } from '../util/routeUtil';
+import NotebooksContainer from './notebooks/notebooks_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
     <Switch>
-      <AuthRoute exact path="/demo" component={DemoLoginContainer}/>
+      <AuthRoute exact path="/demo" component={DemoLoginContainer} />
       <AuthRoute exact path="/login" component={LoginForm} />
       <AuthRoute exact path="/signup" component={SignUpForm} />
       <ProtectedRoute exact path="/notes" component={NotesContainer} />
+      <ProtectedRoute exact path="/notebooks" component={NotebooksContainer} />
       <AuthRoute path="/" component={LandingContainer} />
       <Redirect to="/" />
     </Switch>

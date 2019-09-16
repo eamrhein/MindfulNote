@@ -1,0 +1,19 @@
+.modal-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0px;
+  background: rgba(7, 7, 7, 0.8);
+  z-index: 10;
+}
+
+.modal-fg{
+  border-radius: 8px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background: white;
+  height: 40%;
+  width: 40%
+}

@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable import/prefer-default-export */
-
 export const fetchNotes = () => (
   $.ajax({
     url: '/api/notes',

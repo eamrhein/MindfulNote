@@ -1,12 +1,11 @@
-/* eslint-disable import/prefer-default-export */
-import * as noteApi from '../util/noteApiUtil';
+import * as noteAPI from '../util/note_api_util';
 
 export const RECEIVE_ALL_NOTES = 'RECEIVE_ALL_NOTES';
 export const RECEIVE_NOTE = 'RECEIVE_NOTE';
 export const REMOVE_NOTE = 'REMOVE_NOTE';
 export const START_LOADING_ALL_NOTES = 'START_LOADING_ALL_NOTES';
 
-export const receiveALLnotes = (notes) => ({
+export const receiveAllnotes = (notes) => ({
   type: RECEIVE_ALL_NOTES,
   notes,
 });
@@ -21,32 +20,32 @@ export const receiveNote = (note) => ({
   note,
 });
 
-const startLoadingAllNotes = () => ({
+const startLoadingallNotes = () => ({
   type: START_LOADING_ALL_NOTES,
 });
 
-export const createNote = (note) => (dispatch) => {
-  noteApi.createNote(note)
-    .then((slug) => dispatch(receiveNote(slug)));
-};
+export const createNote = (note) => (dispatch) => (
+  noteAPI.createNote(note)
+    .then((slug) => dispatch(receiveNote(slug)))
+);
 
 export const deleteNote = (id) => (dispatch) => (
-  noteApi.deleteNote(id)
+  noteAPI.deleteNote(id)
     .then((slug) => dispatch(removeNote(slug)))
 );
 
 export const updateNote = (note) => (dispatch) => (
-  noteApi.updateNote(note)
+  noteAPI.updateNote(note)
     .then((slug) => dispatch(receiveNote(slug)))
 );
 
 export const fetchNotes = () => (dispatch) => {
-  dispatch(startLoadingAllNotes());
-  return noteApi.fetchNotes()
-    .then((slug) => dispatch(receiveALLnotes(slug)));
+  dispatch(startLoadingallNotes());
+  return noteAPI.fetchNotes()
+    .then((slug) => dispatch(receiveAllnotes(slug)));
 };
 
 export const fetchNote = (id) => (dispatch) => (
-  noteApi.fetchNote(id)
+  noteAPI.fetchNote(id)
     .then((slug) => dispatch(receiveNote(slug)))
 );

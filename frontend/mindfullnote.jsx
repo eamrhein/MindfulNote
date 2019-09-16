@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-
+import { fetchNotebooks } from './actions/notebook_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
+  // Test
+  window.dispatch = store.dispatch;
+  window.getState = store.getState;
+  window.fetchNotebooks = fetchNotebooks;
   ReactDOM.render(<Root store={store} />, root);
 });

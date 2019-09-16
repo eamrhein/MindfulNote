@@ -25,14 +25,6 @@ class NoteDetailForm extends React.Component {
     this.unfocus = this.unfocus.bind(this);
   }
 
-  // static getDerivedStateFromProps(props, state) {
-  //   if (props.note.id !== state) {
-  //     return props.note;
-  //   }
-  //   return null;
-  // }
-
-  // Should not be calling setstate in componentDidUpdate
   componentDidUpdate(prevProps) {
     const { note } = this.props;
     if (prevProps.note.id !== note.id) {
@@ -58,7 +50,7 @@ class NoteDetailForm extends React.Component {
     if (this.timeout) clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
       updateNote(this.state);
-    }, 2000);
+    }, 1000);
   }
 
   focus() {
