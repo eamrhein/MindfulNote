@@ -18,11 +18,12 @@ const Notes = (props) => {
               props.createNote();
             }
           },
-        )
+        ).then(() => {
+          props.fetchTags();
+        })
       ),
     );
   }, []);
-
   return (
     <main className="notes">
       <NavbarContainer />

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Notes from './notes';
 import { fetchNotes, receiveNote, createNote } from '../../actions/note_actions';
 import { fetchNotebooks } from '../../actions/notebook_actions';
+import { fetchTags } from '../../actions/tag_actions'
 
 const mapSTP = (state) => ({
   user: state.entities.users[state.session.id],
@@ -11,6 +12,7 @@ const mapSTP = (state) => ({
 });
 
 const mapDTP = (dispatch) => ({
+  fetchTags: () => dispatch(fetchTags()),
   fetchNotes: () => dispatch(fetchNotes()),
   fetchNotebooks: () => dispatch(fetchNotebooks()),
   receiveNote: (note) => dispatch(receiveNote(note)),

@@ -5,6 +5,7 @@ import QuillConfig from './quillconfig';
 class NoteDetailForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     const { note } = this.props;
     const {
       title,

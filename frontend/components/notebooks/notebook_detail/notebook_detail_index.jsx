@@ -5,9 +5,13 @@ import NoteIndexItem from '../../notes/notes_index_item';
 
 class NotebookDetailIndex extends React.Component {
   componentDidUpdate(prevState) {
-    const { receiveNote, notes } = this.props;
+    const { receiveNote, notes, createNote } = this.props;
     if (prevState.notes[0] !== notes[0]) {
-      receiveNote(notes[0]);
+      if (notes[0]) {
+        receiveNote(notes[0]);
+      } else {
+        createNote();
+      }
     }
   }
 

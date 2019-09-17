@@ -4,6 +4,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import CreateNotebookContainer from '../notebooks/create_notebook/create_notebook_container';
+import CreateTagContainer from '../tags/create_tag_container';
 
 const Modal = ({ modal, closeModal }) => {
   switch (modal) {
@@ -18,6 +19,17 @@ const Modal = ({ modal, closeModal }) => {
           </div>
         </div>
       );
+    case 'createTag':
+      return (
+        <div
+          className="modal-bg"
+          onClick={closeModal}
+        >
+          <div className="modal-fg" onClick={(e) => e.stopPropagation()}>
+            <CreateTagContainer />
+          </div>
+        </div>
+      )
     default:
       return null;
   }

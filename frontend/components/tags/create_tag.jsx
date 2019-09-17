@@ -1,12 +1,13 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-class CreateNotebook extends React.Component {
+class CreateTag extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
+      tag: {
+        name: '',
+      },
     };
     this.submit = this.submit.bind(this);
   }
@@ -14,26 +15,29 @@ class CreateNotebook extends React.Component {
   change(field) {
     return (e) => (
       this.setState({
-        [field]: e.target.value,
+        tag: {
+          [field]: e.target.value,
+        },
       })
     );
   }
 
   submit(e) {
-    const { createNotebook, closeModal, fetchNotebooks } = this.props;
+    const { createTag, closeModal, fetchTags } = this.props;
     e.preventDefault();
-    createNotebook({ notebook: this.state });
-    fetchNotebooks();
+    createTag(this.state);
+    fetchTags();
     closeModal();
   }
 
   render() {
-    const { title } = this.state;
+    const { tag } = this.state;
+    const { name } = tag;
     const { closeModal } = this.props;
     return (
       <div className="create-notebook">
         <div className="create-nb-header">
-          <h1>Create New Notebook</h1>
+          <h1>Create New Tag</h1>
           <button
             type="button"
             onClick={() => closeModal()}
@@ -41,22 +45,19 @@ class CreateNotebook extends React.Component {
             <i className="fas fa-times" />
           </button>
         </div>
-        <p>Notebooks are useful for grouping notes around a common topic</p>
         <form onSubmit={this.submit}>
-          <div>
           <p>Name:</p>
           <input
             type="text"
-            placeholder="Notebook name"
-            value={title}
-            onChange={this.change('title')}
+            placeholder="Tag name"
+            value={name}
+            onChange={this.change('name')}
           />
-          <input type="submit" id="submit-form-nb" className="hidden" />
-          </div>
-        </form>
+          <input type="submit" id="submit-form" className="hidden" />
+         </form>
         <div className="create-btns">
           <button type="submit" className="create-notebook-btn submit">
-            <label htmlFor="submit-form-nb" type="submit">
+            <label htmlFor="submit-form" type="submit">
               Continue
             </label>
           </button>
@@ -71,6 +72,6 @@ class CreateNotebook extends React.Component {
       </div>
     );
   }
-}
+};
 
-export default CreateNotebook;
+export default CreateTag;

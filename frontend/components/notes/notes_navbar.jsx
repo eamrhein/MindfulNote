@@ -71,10 +71,12 @@ const navBar = ({
         <ul>
           {notebookList}
         </ul>
-        <li className="middle item-wrapper outer">
-          <i className="fas fa-tag" />
-          <span>Tags</span>
-        </li>
+        <Link to="/tags">
+          <li className="middle item-wrapper outer">
+            <i className="fas fa-tag" />
+            <span>Tags</span>
+          </li>
+        </Link>
       </ul>
     </nav>
   );

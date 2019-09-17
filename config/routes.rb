@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resource :session, only: %i[create destroy]
     resources :notes, except: %i[new edit]
     resources :notebooks, except: %i[new edit]
+    resources :tags, only: %i[create destroy index]
   end
 end

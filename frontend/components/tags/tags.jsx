@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
-import NavContainer from '../notes/notes_navbar_container';
-import NotebookIndexContainer from './notebooks_index/notebooks_index_container';
 import ModalContainer from '../modal/modal_container';
+import NavContainer from '../notes/notes_navbar_container';
+import TagsIndexContainer from './tags_index_container';
 
 
-const notebooks = (props) => {
+const tags = (props) => {
   useEffect(() => {
     props.fetchNotebooks().then(() => {
       props.fetchNotes().then(() => {
@@ -18,9 +18,9 @@ const notebooks = (props) => {
     <main className="notebooks">
       <ModalContainer />
       <NavContainer />
-      <NotebookIndexContainer />
+      <TagsIndexContainer />
     </main>
   );
 };
 
-export default notebooks;
+export default tags;

@@ -4,6 +4,7 @@ import NotebookDetailIndex from './notebook_detail_index';
 import {
   receiveNote,
   deleteNote,
+  createNote
 } from '../../../actions/note_actions';
 
 
@@ -16,6 +17,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
   receiveNote: (note) => dispatch(receiveNote(note)),
   deleteNote: (id) => dispatch(deleteNote(id)),
+  createNote: () => dispatch(createNote({ note: { title: '', body: '' } })),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NotebookDetailIndex));

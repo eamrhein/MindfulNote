@@ -8,7 +8,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  title       :string
-#  body        :string
+#  body        :text
 #
 
 require 'test_helper'

@@ -12,7 +12,7 @@ class Api::NotesController < ApplicationController
   end
 
   def index
-    @notes = Note.where(author_id: current_user.id)
+    @notes = Note.where(author_id: current_user.id).sort_by(&:updated_at)
   end
 
   def show
