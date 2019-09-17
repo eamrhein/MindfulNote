@@ -8,7 +8,8 @@ import {
 
 
 const mapStateToProps = (state, ownProps) => ({
-  notes: state.entities.notes,
+  notes: Object.values(state.entities.notes)
+    .filter((note) => (note.notebookId == ownProps.match.params.id)),
   notebook: state.entities.notebooks[ownProps.match.params.id],
 });
 

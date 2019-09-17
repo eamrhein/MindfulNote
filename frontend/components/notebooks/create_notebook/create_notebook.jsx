@@ -36,12 +36,12 @@ class CreateNotebook extends React.Component {
           <h1>Create New Notebook</h1>
           <button
             type="button"
-            onClick={() => closeModal() }
+            onClick={() => closeModal()}
           >
             <i className="fas fa-times" />
           </button>
         </div>
-          <p>Notebooks are useful for grouping notes around a common topic</p>
+        <p>Notebooks are useful for grouping notes around a common topic</p>
         <form onSubmit={this.submit}>
           <p>Name:</p>
           <input
