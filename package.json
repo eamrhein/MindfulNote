@@ -1,5 +1,5 @@
 {
-  "name": "MindfullNote",
+  "name": "MindfulNote",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.6.0",
