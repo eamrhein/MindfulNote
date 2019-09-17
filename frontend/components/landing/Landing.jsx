@@ -38,7 +38,7 @@ const Landing = () => (
               <h4>
                 Take notes anywhere. Find information faster.  Meeting notes, web pages, projects, to-do lists—with mindful note as your note taking app, will
                 <strong>
-                  never
+                 &nbsp; never &nbsp;
                 </strong>
                 slip from your mind.
               </h4>
