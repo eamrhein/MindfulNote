@@ -7,7 +7,8 @@
   width: 345px;
   min-width: 345px;
   color: $softergrey;
-  .notes-index-title{
+
+  .notes-index-title {
     display: flex;
     flex-direction: column;
     height: 120px;
@@ -17,6 +18,7 @@
     padding: 15px;
     font-size: 10pt;
     font-weight: 200;
+
     h1 {
       text-transform: capitalize;
       font-weight: 400;
@@ -26,10 +28,12 @@
     }
 
   }
-  .note-index-items{
+
+  .note-index-items {
     overflow: hidden scroll;
     height: 100%;
   }
+
   .note-index-item {
     box-sizing: border-box;
     border: 0.5px solid $border;
@@ -37,20 +41,24 @@
     border-left-width: 0px;
     height: 120px;
     padding: 10px 10px 10px 20px;
+
     h3 {
       color: $darkgrey;
       display: inline-block;
       font-weight: 600;
     }
-    .item-header{
+
+    .item-header {
       display: flex;
       justify-content: space-between;
     }
-    .fa-trash-alt:hover{
+
+    .fa-trash-alt:hover {
       font-size: 14pt;
       cursor: pointer;
     }
-    .time-since{
+
+    .time-since {
       text-transform: capitalize;
       font-weight: 300;
       font-size: 9pt;
@@ -58,13 +66,15 @@
       margin-bottom: 6px;
     }
   }
-      .note-index-item:focus,
-      .note-index-item:hover {
-        background-color: $mainblue;
-        color: $white;
-        border: 3px solid $selectedborder;
-        h3 {
-          color: $white;
-        }
-      }
+
+  .note-index-item:focus,
+  .note-index-item:hover {
+    background-color: $mainblue;
+    color: $white;
+    border: 3px solid $selectedborder;
+
+    h3 {
+      color: $white;
+    }
+  }
 }

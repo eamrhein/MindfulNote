@@ -1,0 +1,19 @@
+.landing-footer {
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  .landing-foot-head{
+    h1, i {
+      font-size: 20pt;
+    }
+  }
+  hr {
+    border-top: 4px solid $darkgrey;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+  }
+}

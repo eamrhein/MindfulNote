@@ -7,9 +7,10 @@ const navBar = ({
 }) => {
   let notebookList = Object.values(notebooks);
   notebookList = notebookList.map((notebook) => (
-    <Link to={`/notebooks/${notebook.id}`}>
-      <li className=" middle item-wrapper" key={notebook.id}>
+    <Link key={notebook.id} to={`/notebooks/${notebook.id}`}>
+      <li className=" middle item-wrapper">
         <div className="notebooks-nav">
+          <i className="far fa-window-maximize" />
           {notebook.title}
         </div>
       </li>

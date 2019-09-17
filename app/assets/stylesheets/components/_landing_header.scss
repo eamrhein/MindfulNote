@@ -1,7 +1,6 @@
-.landing-head{
+.landing-head {
   position: sticky;
-  top: 0px
-  height 130px;
+  top: 0px height 130px;
   background-color: $white;
   padding-top: 4%;
   padding-bottom: 2%;
@@ -17,28 +16,38 @@
   height: inherit;
 }
 
-.signup-link{
+.signup-link {
   color: $mainblue;
   font-size: 14pt;
   transition: color .2s ease-in-out;
 }
-.signup-link:hover{
+
+.signup-link:hover {
   color: $softerblue;
 }
-.logo{
+
+.logo {
+  font-family: 'Merriweather', serif;
   font-size: 34pt;
   font-weight: 600;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 20px;
+  i {
+    font-size: 40pt;
+    margin-right: 20px;
+    color: $mainblue;
+  }
 }
 
-.nav{
+.nav {
   margin-left: 50px;
+
   ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+
     li {
       margin-left: 20px;
     }
@@ -57,8 +66,9 @@
   border-radius: 3px;
   transition: color 0.2s, border-color 1s, ease-in-out;
 }
+
 .demo-btn:hover,
 .login-btn:hover {
-  color:white;
+  color: white;
   background-color: $mainblue;
 }

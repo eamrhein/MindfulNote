@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { timeSince } from '../../../util/calculations';
 
 const NotebookIndexItem = ({ notebook, deleteNotebook, user }) => {
   let deleteButton = 'Main Notebook';
@@ -16,8 +17,8 @@ const NotebookIndexItem = ({ notebook, deleteNotebook, user }) => {
   return (
     <tr key={notebook.id}>
       <td>{notebook.title}</td>
-      <td>Demo</td>
-      <td>{Date.now()}</td>
+      <td>{user.email}</td>
+      <td>{timeSince(notebook.updatedAt)}</td>
       <td>
         {deleteButton}
       </td>

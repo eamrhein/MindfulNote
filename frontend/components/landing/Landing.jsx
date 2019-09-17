@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Landing = () => (
-  <div>
+  <div className="landing">
     <header className="landing-head">
       <div className="header-content">
-        <div className="logo">
-          <Link to="/"><h1>Mindfull Note</h1></Link>
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <i className="fas fa-brain" />
+            <h1>Mindful Note</h1>
+          </div>
+        </Link>
         <nav className="nav">
           <ul>
             <li className="signup-link">
@@ -26,21 +29,54 @@ const Landing = () => (
       </div>
     </header>
     <section className="landing-body">
-      <div className="strip">
-        <h1>40% off Mindnote Premier</h1>
-      </div>
-      <div className="poster">
-        <div className="poster-text">
-          <h1>Your notes. Organized. Effortless.</h1>
-          <h4>Take notes anywhere. Find information faster. Share ideas with anyone. Meeting notes, web pages, projects, to-do lists—with Evernote as your note taking app, nothing falls through the cracks.</h4>
+      <div className="outer-poster">
+        <div className="poster">
+          <div className="poster-inner">
+            <div className="poster-text">
+              <h1>Keep your mind on your notes.</h1>
+              <h4>Take notes anywhere. Find information faster.  Meeting notes, web pages, projects, to-do lists—with mindful note as your note taking app, will slip from your mind</h4>
+            </div>
+            <div className="poster-img">
+              <img src={window.heroIMG} alt="mindful note display" />
+            </div>
+          </div>
         </div>
-        <div className="poster-img">
-          <img src={window.heroIMG} alt="mindful note display" />
+      </div>
+      <div className="crawler">
+        <div className="crawler-logo">
+          <i className="fas fa-brain" />
+        </div>
+        <div className="crawler-head">
+          <h1>
+            The Details
+          </h1>
+        </div>
+        <div className="crawler-text">
+          <p>
+            Mindfulnote is a free note taking app built by Eric Amrhein as an Evernote Clone. Feel free to contact me at eamrhein@protonmail.ch
+          </p>
+          <p>
+            This is a fullstack web project built with react/redux and designed with a rails backend api. This project utilizes resources such as css reset, quill and fontawesome icons.
+          </p>
+          <p>
+            Feel free to checkout the website, either by creating a new account or by clicking the demo user button at the top of the screen.
+          </p>
         </div>
       </div>
     </section>
-    <footer>
-      this is the footer
+    <footer className="landing-footer">
+      <div className="logo landing-foot-head">
+        <i className="fas fa-brain" />
+        <h1>Mindful Note</h1>
+      </div>
+      <hr/>
+      <div className="footer-links">
+        <span>Github</span>
+        <span>LinkedIn</span>
+        <span>Twitter</span>
+        <span>Website</span>
+        <span>Email</span>
+      </div>
     </footer>
   </div>
 );
