@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -34,7 +35,13 @@ const Landing = () => (
           <div className="poster-inner">
             <div className="poster-text">
               <h1>Keep your mind on your notes.</h1>
-              <h4>Take notes anywhere. Find information faster.  Meeting notes, web pages, projects, to-do lists—with mindful note as your note taking app, will slip from your mind</h4>
+              <h4>
+                Take notes anywhere. Find information faster.  Meeting notes, web pages, projects, to-do lists—with mindful note as your note taking app, will
+                <strong>
+                  never
+                </strong>
+                slip from your mind.
+              </h4>
             </div>
             <div className="poster-img">
               <img src={window.heroIMG} alt="mindful note display" />
