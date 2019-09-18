@@ -1,7 +1,7 @@
 /* eslint-disable react/no-did-update-set-state */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import BottomTagItem from './bottomtag_item'
+import BottomTagItem from './bottomtag_item';
 import * as tagging from '../../util/tagging_api_util';
 import * as tagUtil from '../../util/tag_api_util';
 import { receiveTag } from '../../actions/tag_actions';
@@ -52,6 +52,7 @@ class BottomTag extends React.Component {
       <>
         <div className="tagbar">
           {tagItems}
+          <i className="fas fa-tags" />
           <form onSubmit={this.submit}>
             <input
               type="text"

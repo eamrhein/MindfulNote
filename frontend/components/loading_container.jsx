@@ -5,4 +5,4 @@ const mapSTP = (state) => ({
   loading: state.ui.loading,
 });
 
-export default connect(mapSTP)(Loading)
+export default connect(mapSTP)(Loading);

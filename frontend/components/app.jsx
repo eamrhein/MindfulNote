@@ -9,7 +9,7 @@ import NotebooksContainer from './notebooks/notebooks_container';
 import NotebookDetailContainer from './notebooks/notebook_detail/notebook_detail_container';
 import TagsContainer from './tags/tags_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import LoadingContainer from "./loading_container";
+import LoadingContainer from './loading_container';
 const App = () => (
   <div>
     <LoadingContainer />

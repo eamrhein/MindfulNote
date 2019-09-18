@@ -15,7 +15,7 @@ const BottomTagItem = ({ tag, noteId, unlink, fetchTags }) => {
     <span className="tagbar-item">
       {tag.name}
       <i
-        className="fas fa-trash-alt"
+        className="fas fa-times"
         onClick={unlinkTag}
       />
     </span>

@@ -15,5 +15,32 @@
 }
 .tagbar {
   display: flex;
+  align-items: center;
   flex-direction: row;
+  .fa-tags {
+    margin-left: 10px;
+  }
+  .tagbar-item {
+    padding: 4px;
+    padding-bottom: 6px;
+    padding-left: 18px;
+    margin: 2px;
+    border-radius: 8px;
+    i {
+      color: transparent;
+      vertical-align: super;
+      font-weight: 700;
+      font-size: 8pt;
+
+      margin-left: 5px;
+    }
+  }
+  .tagbar-item:hover {
+    background-color: $selectedborder;
+    border: 0.5px solid $selectedborder;
+  }
+
+  .tagbar-item:hover  i {
+    color: $darkgrey;
+  }
 }
