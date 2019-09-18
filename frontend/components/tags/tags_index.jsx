@@ -1,13 +1,13 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 
-const TagsIndex = ({ tags, openModal }) => {
+const TagsIndex = ({ tags, openModal, deleteTag }) => {
   let tagList = Object.values(tags);
-  tagList = tagList.map((tag) => (
-    <div key={tag.id}>
-      <div>
-        {tag.name}
-      </div>
+  tagList = tagList.map(tag => (
+    <div className="tag-index-item" key={tag.id}>
+      <div>{tag.name}</div>
+      <button type="submit" onClick={() => deleteTag(tag.id)}>
+        <i className="fas fa-trash-alt" />
+      </button>
     </div>
   ));
 
@@ -20,15 +20,19 @@ const TagsIndex = ({ tags, openModal }) => {
           </div>
           <div>
             <span />
-            <a onClick={() => openModal('createTag')} className="new-book">
+            <button
+              onClick={() => openModal("createTag")}
+              className="new-book"
+              type="button"
+            >
               <i className="fas fa-book-medical" />
               <span>New Tag</span>
-            </a>
+            </button>
           </div>
         </div>
         <hr />
         <div className="tags-index">
-              {tagList}
+          {tagList}
         </div>
       </main>
     </div>

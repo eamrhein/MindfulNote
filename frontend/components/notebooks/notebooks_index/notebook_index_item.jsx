@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { timeSince } from '../../../util/calculations';
+import { Link } from 'react-router-dom';
 
 const NotebookIndexItem = ({ notebook, deleteNotebook, user }) => {
   let deleteButton = 'Main Notebook';
@@ -16,7 +17,7 @@ const NotebookIndexItem = ({ notebook, deleteNotebook, user }) => {
   }
   return (
     <tr key={notebook.id}>
-      <td>{notebook.title}</td>
+      <td><Link to={`/notebooks/${notebook.id}`}>{notebook.title}</Link></td>
       <td>{user.email}</td>
       <td>{timeSince(notebook.updatedAt)}</td>
       <td>

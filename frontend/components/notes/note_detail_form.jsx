@@ -1,17 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import QuillConfig from './quillconfig';
+import BottomTagContainer from './bottomtag_container';
 
 class NoteDetailForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     const { note } = this.props;
     const {
-      title,
-      body,
-      id,
-      notebookId,
+      title, body, id, notebookId,
     } = note;
     this.state = {
       title,
@@ -24,26 +21,28 @@ class NoteDetailForm extends React.Component {
     this.handleBodyChange = this.handleBodyChange.bind(this);
     this.focus = this.focus.bind(this);
     this.unfocus = this.unfocus.bind(this);
+    this.changeNote = this.changeNote.bind(this);
   }
 
   componentDidUpdate(prevProps) {
     const { note } = this.props;
     if (prevProps.note.id !== note.id) {
-      this.setState(note);
+      this.changeNote(note);
     }
   }
 
+  changeNote(note) {
+    this.setState(note);
+  }
 
   handleBodyChange(value) {
     this.setState({ body: value });
   }
 
   change(field) {
-    return (e) => (
-      this.setState({
-        [field]: e.target.value,
-      })
-    );
+    return (e) => this.setState({
+      [field]: e.target.value,
+    });
   }
 
   handleSubmit() {
@@ -79,7 +78,11 @@ class NoteDetailForm extends React.Component {
             }}
             onKeyUp={() => this.handleSubmit()}
           />
-          <div className={focus ? 'form-body focused-editor' : 'form-body blurred-editor'}>
+          <div
+            className={
+              focus ? 'form-body focused-editor' : 'form-body blurred-editor'
+            }
+          >
             <QuillConfig
               value={body || ''}
               onChange={this.handleBodyChange}
@@ -93,6 +96,7 @@ class NoteDetailForm extends React.Component {
             />
           </div>
         </form>
+        <BottomTagContainer />
       </div>
     );
   }

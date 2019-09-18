@@ -15,7 +15,7 @@ class Api::TagsController < ApplicationController
   end
 
   def destroy
-    @tag = Tag.find_by(id: params[:tags][:id])
+    @tag = Tag.find_by(id: params[:id])
 
     if @tag.destroy
       render json: @tag

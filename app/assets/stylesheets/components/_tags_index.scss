@@ -1,4 +1,19 @@
 .tags-index {
   width: calc(100vw - 300px);
-  height: calc(100vh -10%);
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  position: relative;
+  padding-top: 10px;
+  .tag-index-item {
+    display: flex;
+    i {
+      margin-left: 4px;
+      margin-right: 4px;
+      font-size: 9pt;
+    }
+  }
+}
+.tagbar {
+  display: flex;
+  flex-direction: row;
 }
