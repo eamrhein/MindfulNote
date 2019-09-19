@@ -5,7 +5,6 @@ import Dropdown from './dropdown';
 const TagIndexItem = ({ tag, deleteTag }) => {
   return (
     <div className="tag-item">
-      
       <Dropdown tag={tag} deleteTag={deleteTag} />
     </div>
   );

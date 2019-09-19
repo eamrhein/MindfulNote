@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { removeTag } from '../../actions/tag_actions';
-
+import { Link } from 'react-router-dom';
 const BottomTagItem = ({
   tag, noteId, unlink, fetchTags,
 }) => {
@@ -15,15 +15,14 @@ const BottomTagItem = ({
   }
 
   return (
-    <span className="tagbar-item">
-      {tag.name}
-      <button
-        onClick={unlinkTag}
-        type="button"
-      >
-        <i className="fas fa-times" />
-      </button>
-    </span>
+    <Link to={`/tags/${tag.id}`}>
+      <span className="tagbar-item">
+        {tag.name}
+        <button onClick={unlinkTag} type="button">
+          <i className="fas fa-times" />
+        </button>
+      </span>
+    </Link>
   );
 };
 

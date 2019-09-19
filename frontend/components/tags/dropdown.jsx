@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Dropdown extends React.Component {
   constructor() {
@@ -36,20 +37,23 @@ class Dropdown extends React.Component {
       <div>
         <button type="button" onClick={this.showMenu}>
           {tag.name}
-          &nbsp; (
-          {tag.noteIds.length || 0}
-          )
+          &nbsp; ({tag.noteIds.length || 0})
         </button>
         {showMenu ? (
           <div
             className="notebook-menu"
-            ref={(element) => {
+            ref={element => {
               this.dropdownMenu = element;
             }}
           >
-            <button onClick={() => deleteTag(tag.id)} type="submit">
-              Delete
-            </button>
+            <li>
+              <Link to={`/tags/${tag.id}`}>Filter by Tag</Link>
+            </li>
+            <li>
+              <button onClick={() => deleteTag(tag.id)} type="submit">
+                Delete
+              </button>
+            </li>
           </div>
         ) : null}
       </div>
