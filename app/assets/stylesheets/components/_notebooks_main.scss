@@ -75,3 +75,14 @@
     background-color: $softgrey;
   }
 }
+
+.notebook-menu {
+  position: absolute;
+  z-index: 3;
+  background-color: $selectedborder;
+  box-shadow: 2px 2px 2px  $darkgrey;
+  border-radius: 3px;
+  padding: 20px;
+  height: 100px;
+
+}
