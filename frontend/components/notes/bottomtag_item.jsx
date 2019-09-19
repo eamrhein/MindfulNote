@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { removeTag } from '../../actions/tag_actions'
-const BottomTagItem = ({ tag, noteId, unlink, fetchTags }) => {
+import { removeTag } from '../../actions/tag_actions';
+
+const BottomTagItem = ({
+  tag, noteId, unlink, fetchTags,
+}) => {
   function unlinkTag(e) {
     e.preventDefault();
     unlink(noteId, tag.id)
@@ -14,10 +17,12 @@ const BottomTagItem = ({ tag, noteId, unlink, fetchTags }) => {
   return (
     <span className="tagbar-item">
       {tag.name}
-      <i
-        className="fas fa-times"
+      <button
         onClick={unlinkTag}
-      />
+        type="button"
+      >
+        <i className="fas fa-times" />
+      </button>
     </span>
   );
 };

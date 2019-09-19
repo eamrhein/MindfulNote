@@ -44,14 +44,14 @@ class CreateNotebook extends React.Component {
         <p>Notebooks are useful for grouping notes around a common topic</p>
         <form onSubmit={this.submit}>
           <div>
-          <p>Name:</p>
-          <input
-            type="text"
-            placeholder="Notebook name"
-            value={title}
-            onChange={this.change('title')}
-          />
-          <input type="submit" id="submit-form-nb" className="hidden" />
+            <p>Name:</p>
+            <input
+              type="text"
+              placeholder="Notebook name"
+              value={title}
+              onChange={this.change('title')}
+            />
+            <input type="submit" id="submit-form-nb" className="hidden" />
           </div>
         </form>
         <div className="create-btns">

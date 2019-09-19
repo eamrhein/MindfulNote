@@ -38,20 +38,26 @@ const navBar = ({
   return (
     <nav className="notes-navbar">
       <ul className="notes-navbar-wrapper">
-        <li className="user-icon" onClick={() => logout()}>
-          <span className="account item-wrapper">
+        <li className="user-icon">
+          <button
+            className="account item-wrapper"
+            onClick={() => logout()}
+            type="button"
+          >
             <i className="fas fa-sign-out-alt" />
-          </span>
-          {user.email}
+            {user.email}
+          </button>
         </li>
       </ul>
-      <ul
-        className="notes-navbar-wrapper"
-        onClick={() => createNote(defaultNote)}
-      >
+      <ul className="notes-navbar-wrapper">
         <li className="new-note item-wrapper">
-          <i className="fas fa-plus" />
-          <span>New Note</span>
+          <button
+            onClick={() => createNote(defaultNote)}
+            type="button"
+          >
+            <i className="fas fa-plus" />
+            <span>New Note</span>
+          </button>
         </li>
       </ul>
       <ul className="notes-navbar-wrapper">
@@ -59,7 +65,7 @@ const navBar = ({
           <li className="middle item-wrapper outer ">
             <i className="fas fa-file-alt" />
             All Notes
-        </li>
+          </li>
         </Link>
         <Link to="/notebooks">
           <li className="middle item-wrapper">

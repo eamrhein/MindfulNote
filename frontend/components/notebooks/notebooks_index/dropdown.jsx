@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { Component } from 'react';
+import React from 'react';
 
 class Dropdown extends React.Component {
   constructor() {
@@ -22,36 +22,39 @@ class Dropdown extends React.Component {
   }
 
   closeMenu(event) {
-
     if (!this.dropdownMenu.contains(event.target)) {
-
       this.setState({ showMenu: false }, () => {
         document.removeEventListener('click', this.closeMenu);
       });
-
     }
   }
 
   render() {
     const { user, notebook, deleteNotebook } = this.props;
-    let deleteButton = 'Main Notebook';
+    const { showMenu } = this.state;
+    let deleteButton = 'Main';
     if (user.email !== notebook.title) {
       deleteButton = (
-        <button onClick={() => deleteNotebook(notebook.id)} type="submit">
-          Delete
-        </button>
+        <li>
+          <button onClick={() => deleteNotebook(notebook.id)} type="submit">
+            Delete
+          </button>
+        </li>
       );
     }
     return (
       <div>
-        <button onClick={this.showMenu}>
+        <button
+          type="button"
+          onClick={this.showMenu}
+        >
           <i className="fas fa-ellipsis-v" />
         </button>
 
-        {this.state.showMenu ? (
+        {showMenu ? (
           <div
             className="notebook-menu"
-            ref={element => {
+            ref={(element) => {
               this.dropdownMenu = element;
             }}
           >
@@ -61,6 +64,6 @@ class Dropdown extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Dropdown;

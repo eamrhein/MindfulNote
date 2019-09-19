@@ -76,7 +76,7 @@ const Landing = () => (
         <i className="fas fa-brain" />
         <h1>Mindful Note</h1>
       </div>
-      <hr/>
+      <hr />
       <div className="footer-links">
         <span>Github</span>
         <span>LinkedIn</span>

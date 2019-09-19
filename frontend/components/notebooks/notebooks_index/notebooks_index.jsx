@@ -2,7 +2,9 @@
 import React from 'react';
 import NotebookIndexItem from './notebook_index_item';
 
-const notebookIndex = ({ notebooks, openModal, deleteNotebook, user }) => {
+const notebookIndex = ({
+  notebooks, openModal, deleteNotebook, user,
+}) => {
   let notebookList = Object.values(notebooks);
   notebookList = notebookList.map((notebook) => (
     <NotebookIndexItem
@@ -21,10 +23,14 @@ const notebookIndex = ({ notebooks, openModal, deleteNotebook, user }) => {
         </div>
         <div>
           <span>My notebook list</span>
-          <a onClick={() => openModal('createNotebook') } className="new-book">
+          <button
+            onClick={() => openModal('createNotebook')}
+            className="new-book"
+            type="button"
+          >
             <i className="fas fa-book-medical" />
             <span>New Notebook</span>
-          </a>
+          </button>
         </div>
       </div>
       <hr />

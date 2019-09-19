@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import ReactQuill from 'react-quill';
 
@@ -18,7 +19,9 @@ const modules = {
   toolbar,
 };
 
-const QuillConfig = ({ value, onChange, className, onFocus, onKeyUp}) => (
+const QuillConfig = ({
+  value, onChange, className, onFocus, onKeyUp,
+}) => (
   <ReactQuill
     className={className}
     value={value}

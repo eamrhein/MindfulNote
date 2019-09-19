@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
@@ -54,7 +55,7 @@ class CreateTag extends React.Component {
             onChange={this.change('name')}
           />
           <input type="submit" id="submit-form" className="hidden" />
-         </form>
+        </form>
         <div className="create-btns">
           <button type="submit" className="create-notebook-btn submit">
             <label htmlFor="submit-form" type="submit">
@@ -72,6 +73,6 @@ class CreateTag extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default CreateTag;

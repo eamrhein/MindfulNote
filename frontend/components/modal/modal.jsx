@@ -29,7 +29,7 @@ const Modal = ({ modal, closeModal }) => {
             <CreateTagContainer />
           </div>
         </div>
-      )
+      );
     default:
       return null;
   }

@@ -35,6 +35,8 @@
   }
 
   .note-index-item {
+    display:  block;
+    width: 100%;
     box-sizing: border-box;
     border: 0.5px solid $border;
     border-top-width: 0px;

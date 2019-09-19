@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const TagsIndex = ({ tags, openModal, deleteTag }) => {
   let tagList = Object.values(tags);
-  tagList = tagList.map(tag => (
+  tagList = tagList.map((tag) => (
     <div className="tag-index-item" key={tag.id}>
       <div>{tag.name}</div>
       <button type="submit" onClick={() => deleteTag(tag.id)}>
@@ -21,7 +22,7 @@ const TagsIndex = ({ tags, openModal, deleteTag }) => {
           <div>
             <span />
             <button
-              onClick={() => openModal("createTag")}
+              onClick={() => openModal('createTag')}
               className="new-book"
               type="button"
             >

@@ -55,8 +55,7 @@
         transform: scale(1.20);
       }
     }
-
-    .new-note:hover>i {
+    .new-note:hover > button > i {
       animation: createCircle 30s infinite;
     }
   }

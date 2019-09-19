@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { timeSince } from '../../util/calculations.js';
+import { timeSince } from '../../util/calculations';
 
 const NoteIndexItem = (props) => {
   const { note, receiveNote, deleteNote } = props;
@@ -8,17 +8,20 @@ const NoteIndexItem = (props) => {
     .replace(/<\/?[^>]+(>|$)/g, ' ')
     .slice(0, 100);
   return (
-    <div
+    <button
+      type="button"
       className="note-index-item unselectable"
       tabIndex={note.id}
       onClick={() => receiveNote(note)}
     >
       <div className="item-header">
         <h3>{note.title || 'Untitled'}</h3>
-        <i
-          className="fas fa-trash-alt"
+        <button
           onClick={() => deleteNote(note.id)}
-        />
+          type="button"
+        >
+          <i className="fas fa-trash-alt" />
+        </button>
       </div>
       <p>{notePreview}</p>
       <p className="time-since">
@@ -26,7 +29,7 @@ const NoteIndexItem = (props) => {
         {' '}
         ago
       </p>
-    </div>
+    </button>
   );
 };
 
