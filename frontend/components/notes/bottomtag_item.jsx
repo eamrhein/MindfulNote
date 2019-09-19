@@ -2,6 +2,7 @@
 import React from 'react';
 import { removeTag } from '../../actions/tag_actions';
 import { Link } from 'react-router-dom';
+
 const BottomTagItem = ({
   tag, noteId, unlink, fetchTags,
 }) => {

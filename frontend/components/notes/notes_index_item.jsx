@@ -16,12 +16,12 @@ const NoteIndexItem = (props) => {
     >
       <div className="item-header">
         <h3>{note.title || 'Untitled'}</h3>
-        <button
+        <a
           onClick={() => deleteNote(note.id)}
-          type="button"
+          type="submit"
         >
           <i className="fas fa-trash-alt" />
-        </button>
+        </a>
       </div>
       <p>{notePreview}</p>
       <p className="time-since">

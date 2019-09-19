@@ -19,7 +19,6 @@ class NotebookDetailIndex extends React.Component {
     const {
       notes, receiveNote, deleteNote, tag,
     } = this.props;
-    console.log(notes);
     let title;
     if (tag) {
       title = tag.name;
