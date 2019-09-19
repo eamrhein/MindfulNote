@@ -20,19 +20,46 @@ class BottomTag extends React.Component {
     this.setState({ name: e.target.value });
   }
 
-  submit(e) {
-    e.preventDefault();
+  createNewTag() {
     const { noteId, fetchTags } = this.props;
     const { name } = this.state;
-    tagUtil.createTag({ tag: { name } })
+    tagUtil
+      .createTag({ tag: { name } })
       .then((received) => {
         tagging.linkNotetoTag(noteId, received.id);
         fetchTags();
         receiveTag(received);
-      }).then(() => {
+      })
+      .then(() => {
         fetchTags();
         this.setState({ name: '' });
       });
+  }
+
+  linkExistingTag(tagId) {
+    const { noteId, fetchTags, userTags } = this.props;
+    tagging
+      .linkNotetoTag(noteId, tagId)
+      .then(() => {
+        fetchTags();
+        receiveTag(userTags[tagId]);
+      })
+      .then(() => {
+        fetchTags();
+        this.setState({ name: '' });
+      });
+  }
+
+  submit(e) {
+    e.preventDefault();
+    const { userTags } = this.props;
+    const { name } = this.state;
+    if (userTags.every((tag) => tag.name !== name)) {
+      this.createNewTag();
+    } else {
+      const relTag = userTags.find((tag) => tag.name === name)
+      this.linkExistingTag(relTag.id);
+    }
   }
 
   render() {

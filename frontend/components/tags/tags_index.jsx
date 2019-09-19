@@ -1,16 +1,42 @@
-/* eslint-disable react/prop-types */
+
 import React from 'react';
+import { alphabetizeTags } from '../../util/calculations';
+import TagIndexItem from './tag_index_item';
 
 const TagsIndex = ({ tags, openModal, deleteTag }) => {
-  let tagList = Object.values(tags);
-  tagList = tagList.map((tag) => (
-    <div className="tag-index-item" key={tag.id}>
-      <div>{tag.name}</div>
-      <button type="submit" onClick={() => deleteTag(tag.id)}>
-        <i className="fas fa-trash-alt" />
-      </button>
-    </div>
-  ));
+  let tagList = alphabetizeTags(Object.values(tags));
+
+  // Logic for this borrowed from a classmate, Alex Chui
+  let firstChar;
+  if (tagList.length > 0) {
+    tagList = tagList.map((tag) => {
+      let thing;
+      if (firstChar !== tag.name[0].toUpperCase()) {
+        firstChar = tag.name[0].toUpperCase();
+        thing = (
+          <React.Fragment key={`${firstChar}frag`}>
+            <div className="tag-header" key={firstChar}>
+              {tag.name[0].toUpperCase()}
+            </div>
+            <TagIndexItem key={tag.id} tag={tag} deleteTag={deleteTag} />
+          </React.Fragment>
+        );
+      } else {
+        thing = (
+          <TagIndexItem key={tag.id} tag={tag} deleteTag={deleteTag}/>
+        );
+      }
+      return thing;
+    });
+  }
+  // tagList = tagList.map((tag) => (
+  //   <div className="tag-index-item" key={tag.id}>
+  //     <div>{tag.name}</div>
+  //     <button type="submit" onClick={() => deleteTag(tag.id)}>
+  //       <i className="fas fa-trash-alt" />
+  //     </button>
+  //   </div>
+  // ));
 
   return (
     <div>

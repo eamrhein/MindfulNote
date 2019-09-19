@@ -6,6 +6,7 @@ const mapSTP = (state) => ({
   tags: Object.values(state.entities.tags)
     .filter((tag) => tag.noteIds.includes(state.ui.activeNote.id)),
   noteId: state.ui.activeNote.id,
+  userTags: Object.values(state.entities.tags),
 });
 
 const mapDTP = (dispatch) => ({

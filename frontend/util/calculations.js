@@ -27,3 +27,19 @@ export const timeSince = (date) => {
   }
   return `${Math.floor(seconds)} seconds`;
 };
+
+export const alphabetizeTags = (tags) => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  if (tags.length <= 1) return tags;
+  const pivot = tags[0];
+  const left = [];
+  const right = [];
+
+  for (let i = 1; i < tags.length; i += 1) {
+    const a = alphabet.indexOf(tags[i].name[0].toLowerCase());
+    const b = alphabet.indexOf(pivot.name[0].toLowerCase());
+    a < b ? left.push(tags[i]) : right.push(tags[i])
+  }
+
+  return alphabetizeTags(left).concat([pivot], alphabetizeTags(right));
+};

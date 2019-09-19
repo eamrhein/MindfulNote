@@ -1,6 +1,7 @@
 .tags-index {
   width: calc(100vw - 300px);
   max-height: calc(100vh - 150px);
+  height: calc(100vh - 200px);
   overflow-y: auto;
   position: relative;
   padding-top: 10px;
@@ -11,6 +12,16 @@
       margin-right: 4px;
       font-size: 9pt;
     }
+  }
+  .tag-header {
+    font-weight: 500;
+    font-size: 12pt;
+  }
+  .tag-item {
+    text-transform: capitalize;
+    font-size: 11;
+    font-weight: 300;
+    margin-left: 3px;
   }
 }
 .tagbar {
@@ -39,7 +50,6 @@
     background-color: $selectedborder;
     border: 0.5px solid $selectedborder;
   }
-
   .tagbar-item:hover  i {
     color: $darkgrey;
   }
