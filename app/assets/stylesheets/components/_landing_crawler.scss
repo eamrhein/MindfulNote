@@ -1,30 +1,30 @@
 .crawler {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .crawler-logo {
-    font-size: 200pt;
-    .fa-brain {
-      color: $mainblue;
-      text-shadow: 4px 4px $selectedborder;
-    }
-  }
-  .crawler-text {
-    text-align: justify;
-    line-height: 30px;
-    max-width: 40%;
-  }
-  h1 {
-    color: $darkgrey;
-    font-size: 32pt;
-    font-weight: 300;
-  }
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.crawler-logo {
+		font-size: 200pt;
+		.fa-brain {
+			color: $mainblue;
+			text-shadow: 4px 4px $selectedborder;
+		}
+	}
+	.crawler-text {
+		text-align: justify;
+		line-height: 30px;
+		max-width: 40%;
+	}
+	h1 {
+		color: $darkgrey;
+		font-size: 32pt;
+		font-weight: 300;
+	}
 
-  p {
-    padding-bottom: 1.5em;
-    color: #676767;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    font-size: 15pt;
-  }
+	p {
+		padding-bottom: 1.5em;
+		color: #676767;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		font-size: 15pt;
+	}
 }

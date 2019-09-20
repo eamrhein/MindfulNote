@@ -1,54 +1,52 @@
-
 .landing {
-  overflow: hidden;
+	overflow: hidden;
 }
 .strip {
-  padding: 20px;
-  font-size: 30pt;
-  display: flex;
-  align-items: center;
-  height: 100px;
-  color: $white;
-  background-color: $darkgrey;
+	padding: 20px;
+	font-size: 30pt;
+	display: flex;
+	align-items: center;
+	height: 100px;
+	color: $white;
+	background-color: $darkgrey;
 }
 
 .outer-poster {
-  background: $mainblue;
+	background: $mainblue;
 }
 .poster {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-  padding: 120px 0 140px 0;
-  margin: 0 auto;
-  color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	padding: 120px 0 140px 0;
+	margin: 0 auto;
 }
 
 .poster-inner {
-  display: flex;
-  justify-content: space-between;
-  max-width: 70%;
-  h1 {
-    font-size: 42pt;
-    line-height: 1.2em;
-  }
-  h4 {
-    font-size: 18pt;
-    font-weight: 200;
-  }
-  .poster-img>img {
-    width: auto;
-    max-width: 600px;
-    z-index: 3;
-  }
+	display: flex;
+	justify-content: space-between;
+	max-width: 70%;
+	h1 {
+		font-size: 42pt;
+		line-height: 1.2em;
+	}
+	h4 {
+		font-size: 18pt;
+		font-weight: 200;
+	}
+	.poster-img > img {
+		width: auto;
+		max-width: 600px;
+		z-index: 3;
+	}
 }
 @media only screen and (max-width: 1200px) {
-  .poster-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 95%;
-  }
+	.poster-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 95%;
+	}
 }

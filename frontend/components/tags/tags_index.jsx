@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import React from 'react';
 import { alphabetizeTags } from '../../util/calculations';
@@ -23,20 +24,12 @@ const TagsIndex = ({ tags, openModal, deleteTag }) => {
         );
       } else {
         thing = (
-          <TagIndexItem key={tag.id} tag={tag} deleteTag={deleteTag}/>
+          <TagIndexItem key={tag.id} tag={tag} deleteTag={deleteTag} />
         );
       }
       return thing;
     });
   }
-  // tagList = tagList.map((tag) => (
-  //   <div className="tag-index-item" key={tag.id}>
-  //     <div>{tag.name}</div>
-  //     <button type="submit" onClick={() => deleteTag(tag.id)}>
-  //       <i className="fas fa-trash-alt" />
-  //     </button>
-  //   </div>
-  // ));
 
   return (
     <div>

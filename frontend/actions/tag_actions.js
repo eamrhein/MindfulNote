@@ -33,4 +33,3 @@ export const fetchTags = () => (dispatch) => (
   tagAPI.fetchTags()
     .then((data) => dispatch(receiveAllTags(data)))
 );
-

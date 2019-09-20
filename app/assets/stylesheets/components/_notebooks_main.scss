@@ -1,102 +1,102 @@
 .notebooks {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100vw;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	width: 100vw;
 }
 
 .notebooks-wrapper {
-  padding: 30px;
-  display: table;
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
+	padding: 30px;
+	display: table;
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
 
-  hr {
-    margin-bottom: 0px;
-    border-top: 1.5px solid $darkgrey;
-    border-radius: 1px;
-  }
+	hr {
+		margin-bottom: 0px;
+		border-top: 1.5px solid $darkgrey;
+		border-radius: 1px;
+	}
 }
 
 .notebooks-header {
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	height: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-  h1 {
-    font-size: 20pt;
-  }
+	h1 {
+		font-size: 20pt;
+	}
 
-  div {
-    display: flex;
-    justify-content: space-between;
-  }
+	div {
+		display: flex;
+		justify-content: space-between;
+	}
 
-  .new-book,
-  .fas {
-    color: $mainblue;
-  }
+	.new-book,
+	.fas {
+		color: $mainblue;
+	}
 
-  .new-book:hover {
-    color: $softerblue;
-  }
+	.new-book:hover {
+		color: $softerblue;
+	}
 }
 
 .notebook-table {
-  table {
-    width: 100%;
-  }
+	table {
+		width: 100%;
+	}
 
-  table,
-  td,
-  th {
-    border-collapse: collapse;
-  }
+	table,
+	td,
+	th {
+		border-collapse: collapse;
+	}
 
-  th,
-  td {
-    padding: 5px;
-  }
+	th,
+	td {
+		padding: 5px;
+	}
 
-  th {
-    padding: 8px;
-    text-transform: uppercase;
-    text-align: left;
-    background-color: $softgrey;
-    color: $selectedborder;
-    font-weight: 500;
-    font-size: 13px;
-    border-bottom: 1px solid $border;
-  }
+	th {
+		padding: 8px;
+		text-transform: uppercase;
+		text-align: left;
+		background-color: $softgrey;
+		color: $selectedborder;
+		font-weight: 500;
+		font-size: 13px;
+		border-bottom: 1px solid $border;
+	}
 
-  tr:nth-child(odd) {
-    background-color: $softgrey;
-  }
+	tr:nth-child(odd) {
+		background-color: $softgrey;
+	}
 }
 
 .notebook-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin: 10px 0;
-  min-width: 150px;
-  z-index: 5;
-  background-color: $white;
-  box-shadow: 0 0 6px rgba(0,0,0,.3);
-  border-radius: 3px;
-  text-align: left;
-  font-size: 12pt;
-  padding: 5px;
-  color: $darkgrey;
-  font-weight: 300;
-  --ease-out-quad: cubic-bezier(0.25,0.46,0.45,0.94);
-  li {
-    list-style: none;
-  }
-  li:hover {
-    font-weight: 600;
-    z-index: 6;
-  }
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin: 10px 0;
+	min-width: 150px;
+	z-index: 5;
+	background-color: $white;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	text-align: left;
+	font-size: 12pt;
+	padding: 5px;
+	color: $darkgrey;
+	font-weight: 300;
+	--ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	li {
+		list-style: none;
+	}
+	li:hover {
+		font-weight: 600;
+		z-index: 6;
+	}
 }

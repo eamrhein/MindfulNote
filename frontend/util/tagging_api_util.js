@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export const linkNotetoTag = (note_id, tag_id) => (
   $.ajax({
     url: '/api/taggings/',

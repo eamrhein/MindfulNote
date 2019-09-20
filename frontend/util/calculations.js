@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable import/prefer-default-export */
 // https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
 
@@ -28,6 +29,8 @@ export const timeSince = (date) => {
   return `${Math.floor(seconds)} seconds`;
 };
 
+// This code was shared with my from classmate Alex Chui
+
 export const alphabetizeTags = (tags) => {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   if (tags.length <= 1) return tags;
@@ -38,7 +41,7 @@ export const alphabetizeTags = (tags) => {
   for (let i = 1; i < tags.length; i += 1) {
     const a = alphabet.indexOf(tags[i].name[0].toLowerCase());
     const b = alphabet.indexOf(pivot.name[0].toLowerCase());
-    a < b ? left.push(tags[i]) : right.push(tags[i])
+    a < b ? left.push(tags[i]) : right.push(tags[i]);
   }
 
   return alphabetizeTags(left).concat([pivot], alphabetizeTags(right));

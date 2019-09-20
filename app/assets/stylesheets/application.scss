@@ -14,14 +14,14 @@
  */
 
 /* css reset */
-  @import './main/reset';
+@import './main/reset';
 /* styling */
-  @import './main/basic';
-  @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-  @import './main/quill.snow';
-  @import './main/colors';
-  @import "font-awesome-sprockets";
-  @import "font-awesome";
+@import './main/basic';
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import './main/quill.snow';
+@import './main/colors';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 /* components */
-   @import './components/*'
+@import './components/*';

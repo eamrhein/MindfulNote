@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { removeTag } from '../../actions/tag_actions';
 import { Link } from 'react-router-dom';
+import { removeTag } from '../../actions/tag_actions';
 
 const BottomTagItem = ({
   tag, noteId, unlink, fetchTags,
