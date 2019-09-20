@@ -6,9 +6,16 @@ const Loading = ({ loading }) => {
     return (
       <div className="lds-background">
         <div className="lds-container">
-          <div className="lds-ripple">
-            <div />
-            <div />
+          <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </div>
