@@ -1,24 +1,22 @@
-# README
+# Mindfulnote
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.
 
-Things you may want to cover:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* Ruby version
+[Live Link](https://mindfullnote.herokuapp.com)
 
-* System dependencies
+## Technologies
++ #### Database: [Postgresql](https://www.postgresql.org/)
++ #### Backend: [Ruby on Rails](https://rubyonrails.org/)
++ #### Frontend Components: [React](https://reactjs.org/)
++ #### Frontend State: [Redux](https://redux.js.org/)
 
-* Configuration
+## Features
++ Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.
 
-* Database creation
+![Alt Text](https://i.postimg.cc/PrsjDp1Q/part2.gif)
 
-* Database initialization
++ Rich-text editor that allows user to edit text
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Installation
