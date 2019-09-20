@@ -31,3 +31,27 @@ Mindfulnote note taking application based on the functionality of Evernote. It a
 
 ![part5](https://user-images.githubusercontent.com/1903468/65347541-15dda200-db94-11e9-9c7f-9fb2af1c5761.gif)
 
+## Code Features
+
+#### Auto Saving using an Async callback event handler.
+
+```javascript
+
+class NoteDetailForm extends React.Component {
+  constructor(props) {
+    super(props)
+    ...
+    this.timeout = 0;
+    this.handleBodyChange = this.handleBodyChange.bind(this);
+    this.changeNote = this.changeNote.bind(this);
+  }
+  ...
+  handleSubmit() {
+      const { updateNote } = this.props;
+      if (this.timeout) clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        updateNote(this.state);
+      }, 1000);
+    }
+ }
+
