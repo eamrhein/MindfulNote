@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
             <i className="fas fa-brain" />
           </div>
           <div>
-            <h1>Mindfull </h1>
+            <h1>Mindful </h1>
             <h1> Note</h1>
             <p>Be mindfull of important things.</p>
           </div>

@@ -45,7 +45,7 @@ class BottomTag extends React.Component {
         receiveTag(userTags[tagId]);
       })
       .then(() => {
-        fetchTags();
+        // fetchTags();
         this.setState({ name: '' });
       });
   }
