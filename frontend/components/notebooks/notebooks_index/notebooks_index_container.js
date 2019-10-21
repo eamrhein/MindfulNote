@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import NotebooksIndex from './notebooks_index';
 import { openModal } from '../../../actions/modal_actions';
 import { deleteNotebook } from '../../../actions/notebook_actions';
@@ -13,4 +14,4 @@ const mapDTP = (dispatch) => ({
   deleteNotebook: (id) => dispatch(deleteNotebook(id)),
 });
 
-export default connect(mapSTP, mapDTP)(NotebooksIndex);
+export default withRouter(connect(mapSTP, mapDTP)(NotebooksIndex));

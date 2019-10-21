@@ -20,10 +20,9 @@ class CreateNotebook extends React.Component {
   }
 
   submit(e) {
-    const { createNotebook, closeModal, fetchNotebooks } = this.props;
+    const { createNotebook, closeModal } = this.props;
     e.preventDefault();
     createNotebook({ notebook: this.state });
-    fetchNotebooks();
     closeModal();
   }
 
