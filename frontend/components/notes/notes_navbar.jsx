@@ -1,13 +1,42 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const navBar = ({
-  logout, createNote, user, notebooks, currentNotebook,
-}) => {
+const navBar = (props) => {
+  useEffect(() => {
+    props.fetchNotebooks().then(
+      () => (
+        props.fetchNotes().then(
+          (res) => {
+            const keys = Object.keys(res.notes);
+            const id = keys[0];
+            if (id) {
+              props.receiveNote(res.notes[id]);
+            } else {
+              props.createNote();
+            }
+          },
+        ).then(() => {
+          props.fetchTags();
+        })
+      ),
+    );
+  }, []);
+
+  const defaultNote = {
+    note: {
+      title: '',
+      body: '',
+      notebook_id: props.current,
+    },
+  };
+
+  const {
+    notebooks, logout, user, createNote,
+  } = props;
   let notebookList = Object.values(notebooks);
   notebookList = notebookList.map((notebook) => (
-    <Link key={notebook.id} to={`/notebooks/${notebook.id}`}>
+    <Link key={notebook.id} onClick={() => props.setCurrentNotebook(notebook.id)} to={`/notebooks/${notebook.id}`}>
       <li className=" middle item-wrapper">
         <div className="notebooks-nav">
           <i className="far fa-window-maximize" />
@@ -16,24 +45,6 @@ const navBar = ({
       </li>
     </Link>
   ));
-
-  let defaultNote;
-  if (currentNotebook) {
-    defaultNote = {
-      note: {
-        title: '',
-        body: '',
-        notebook_id: currentNotebook,
-      },
-    };
-  } else {
-    defaultNote = {
-      note: {
-        title: '',
-        body: '',
-      },
-    };
-  }
 
   return (
     <nav className="notes-navbar">
