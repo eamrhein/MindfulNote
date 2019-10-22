@@ -26,7 +26,7 @@ class NotebookDetailIndex extends React.Component {
     } else {
       title = '';
     }
-    const notesArray = notes.map((note) => (
+    const notesArray = notes.reverse().map((note) => (
       <NoteIndexItem
         className="note"
         key={note.id}

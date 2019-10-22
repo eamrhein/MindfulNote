@@ -4,7 +4,7 @@ import React from 'react';
 import NoteIndexItem from './notes_index_item';
 
 const NotesIndex = ({ notes, receiveNote, deleteNote }) => {
-  let notesArray = Object.values(notes);
+  let notesArray = Object.values(notes).reverse();
   notesArray = notesArray.map((note) => (
     <NoteIndexItem
       className="note"

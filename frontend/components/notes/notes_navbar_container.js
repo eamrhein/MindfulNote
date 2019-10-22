@@ -7,11 +7,12 @@ import { fetchNotebooks } from '../../actions/notebook_actions';
 import { fetchTags } from '../../actions/tag_actions';
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownprops) => ({
   notes: state.entities.notes,
   user: state.entities.users[state.session.id],
   notebooks: state.entities.notebooks,
   current: state.session.currentNotebook || Object.keys(state.entities.notebooks)[0] || [],
+  ownprops,
 });
 
 const mapDTP = (dispatch) => ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 import { ProtectedRoute } from '../util/route_util';
 import NotesContainer from './notes/notes_container';
 import NotebookContainer from './notebooks/notebooks_index/notebooks_index_container';
@@ -14,11 +14,12 @@ const Main = () => (
     <Navbar />
     <ModalContainer />
     <Switch>
-      <ProtectedRoute exact path="/notes" component={NotesContainer} />
+      <ProtectedRoute path="/notes" component={NotesContainer} />
       <ProtectedRoute exact path="/notebooks/:id" component={NotebookDetailContainer} />
       <ProtectedRoute exact path="/notebooks" component={NotebookContainer} />
       <ProtectedRoute exact path="/tags/:id" component={TagsDetailContainer} />
       <ProtectedRoute exact path="/tags" component={TagsContainer} />
+      <Redirect to="/notes" />
     </Switch>
   </main>
 );

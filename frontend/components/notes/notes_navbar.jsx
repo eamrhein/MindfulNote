@@ -34,6 +34,15 @@ const navBar = (props) => {
   const {
     notebooks, logout, user, createNote,
   } = props;
+
+  function newNote() {
+    createNote(defaultNote);
+    const path = props.ownprops.location.pathname;
+    const conditionals = ['/notebooks/', '/tags'];
+    if (!path.includes(conditionals[0]) || path.includes(conditionals[1])) {
+      props.ownprops.history.push('/notes');
+    }
+  }
   let notebookList = Object.values(notebooks);
   notebookList = notebookList.map((notebook) => (
     <Link key={notebook.id} onClick={() => props.setCurrentNotebook(notebook.id)} to={`/notebooks/${notebook.id}`}>
@@ -63,7 +72,7 @@ const navBar = (props) => {
       <ul className="notes-navbar-wrapper">
         <li className="new-note item-wrapper">
           <button
-            onClick={() => createNote(defaultNote)}
+            onClick={() => newNote()}
             type="button"
           >
             <i className="fas fa-plus" />
