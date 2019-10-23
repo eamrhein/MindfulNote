@@ -83,7 +83,7 @@ const Landing = () => (
       <hr />
       <div className="footer-links">
         <span>
-          <a href="www.github.com/eamrhein">
+          <a href="https://www.github.com/eamrhein">
             <i className="fab fa-github" />
             &nbsp; Github
           </a>
@@ -96,13 +96,14 @@ const Landing = () => (
         <span>
           <a href="https://www.twitter.com/eamrhein">
             <i className="fab fa-twitter" />
-            &nbsp;
-            Twitter
+            &nbsp; Twitter
           </a>
         </span>
         <span>
-          <i className="fas fa-user-circle" />
-          Website
+          <a href="http://ericamrhein.com">
+            <i className="fas fa-user-circle" />
+            Website
+          </a>
         </span>
         <span>
           <a href="mailto:eamrhein@protonmail.ch">
