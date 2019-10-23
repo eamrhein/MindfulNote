@@ -25,7 +25,7 @@ const Protected = ({
     render={(props) => (loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/" />
+      <Redirect to="/landing" />
     ))}
   />
 );

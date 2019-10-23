@@ -1,21 +1,29 @@
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import NotesNavbar from './notes_navbar';
-import { logout } from '../../actions/session_actions';
-import { createNote } from '../../actions/note_actions';
+import { logout, currentNoteBook } from '../../actions/session_actions';
+import { fetchNotes, receiveNote, createNote } from '../../actions/note_actions';
+import { fetchNotebooks } from '../../actions/notebook_actions';
+import { fetchTags } from '../../actions/tag_actions';
 
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownprops) => ({
   notes: state.entities.notes,
   user: state.entities.users[state.session.id],
   notebooks: state.entities.notebooks,
-  currentNotebook: ownProps.match.params.id,
+  current: state.session.currentNotebook || Object.keys(state.entities.notebooks)[0] || [],
+  ownprops,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(logout()),
+const mapDTP = (dispatch) => ({
+  setCurrentNotebook: (id) => dispatch(currentNoteBook(id)),
+  fetchTags: () => dispatch(fetchTags()),
+  fetchNotes: () => dispatch(fetchNotes()),
+  fetchNotebooks: () => dispatch(fetchNotebooks()),
+  receiveNote: (note) => dispatch(receiveNote(note)),
   createNote: (note) => dispatch(createNote(note)),
+  logout: () => dispatch(logout()),
 });
 
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NotesNavbar));
+export default withRouter(connect(mapStateToProps, mapDTP)(NotesNavbar));

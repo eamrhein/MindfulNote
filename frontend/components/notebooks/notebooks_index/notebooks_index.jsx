@@ -5,7 +5,7 @@ import NotebookIndexItem from './notebook_index_item';
 const notebookIndex = ({
   notebooks, openModal, deleteNotebook, user,
 }) => {
-  let notebookList = Object.values(notebooks);
+  let notebookList = Object.values(notebooks).reverse();
   notebookList = notebookList.map((notebook) => (
     <NotebookIndexItem
       user={user}
