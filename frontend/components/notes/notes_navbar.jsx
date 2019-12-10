@@ -92,12 +92,12 @@ const navBar = (props) => {
             All Notes
           </li>
         </Link>
+        <Link to="/notebooks">
           <li className="middle item-wrapper">
             <i
               onClick={toggleCaret} 
               className={caret ? 'fa fa-caret-down' : 'fa fa-caret-right'}
             />
-          <Link to="/notebooks"></Link>
             <i className="fas fa-book" />
             Notebooks
           </li>
