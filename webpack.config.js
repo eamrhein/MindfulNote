@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
   entry: './frontend/mindfulnote.jsx',
@@ -19,6 +21,12 @@ module.exports = {
       },
     }],
   },
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new MinifyPlugin(),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pdt/),
+  ],
   resolve: {
     extensions: ['.json', '.js', '.jsx'],
   },

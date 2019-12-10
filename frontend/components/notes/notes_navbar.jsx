@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const navBar = (props) => {
@@ -22,7 +22,7 @@ const navBar = (props) => {
       ),
     );
   }, []);
-
+  const [caret, setCaret]  = useState(false);
   const defaultNote = {
     note: {
       title: '',
@@ -89,13 +89,18 @@ const navBar = (props) => {
         </Link>
         <Link to="/notebooks">
           <li className="middle item-wrapper">
-            <i className="fas fa-caret-down" />
+            <i
+              onClick={(e) => setCaret(!caret)} 
+              className="fas fa-caret-down"
+            />
             <i className="fas fa-book" />
             Notebooks
           </li>
         </Link>
         <ul>
-          {notebookList}
+          { 
+            caret ? notebookList : ''
+          }
         </ul>
         <Link to="/tags">
           <li className="middle item-wrapper outer">
