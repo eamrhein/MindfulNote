@@ -44,7 +44,12 @@
 			border-radius: 50%;
 			padding: 8px;
 		}
-
+		.fa-caret-right {
+			margin-right: 13px;
+		}
+		.fa-caret-down {
+			margin-right: 10px;
+		}
 		@keyframes createCircle {
 			0% {
 				transform: scale(0.9);
@@ -59,13 +64,11 @@
 		}
 	}
 }
-
 .fas,
 .far {
 	margin-right: 8px;
 	color: $greytext;
 }
-
 .middle:hover {
 	background-color: $darkgrey;
 }

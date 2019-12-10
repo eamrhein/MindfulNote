@@ -55,6 +55,11 @@ const navBar = (props) => {
     </Link>
   ));
 
+  function toggleCaret(e) {
+    e.preventDefault();
+    setCaret(!caret)
+  }
+
   return (
     <nav className="notes-navbar">
       <ul className="notes-navbar-wrapper">
@@ -87,12 +92,12 @@ const navBar = (props) => {
             All Notes
           </li>
         </Link>
-        <Link to="/notebooks">
           <li className="middle item-wrapper">
             <i
-              onClick={(e) => setCaret(!caret)} 
-              className="fas fa-caret-down"
+              onClick={toggleCaret} 
+              className={caret ? 'fa fa-caret-down' : 'fa fa-caret-right'}
             />
+          <Link to="/notebooks"></Link>
             <i className="fas fa-book" />
             Notebooks
           </li>
