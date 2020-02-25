@@ -4,7 +4,7 @@ Mindfulnote note taking application based on the functionality of Evernote. It a
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Live Link](https://mindfullnote.herokuapp.com)
+[Live Link](https://mindfull-note.herokuapp.com/)
 
 ![part1](https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif)
 
