@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require material_icons
  */
 
 /* css reset */
@@ -19,9 +20,8 @@
 @import './main/basic';
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import './main/quill.snow';
 @import './main/colors';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-/* components */
+// /* components */
 @import './components/*';

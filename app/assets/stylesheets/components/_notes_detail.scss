@@ -1,32 +1,15 @@
-.note-form-wrapper {
-	box-sizing: border-box;
-	padding: 20px;
+h1 {
+  font-size: 28pt;
 }
-
-.note-form {
-	display: table;
+h2 {
+  font-size: 22pt;
 }
-
-.form-title {
-	display: table-row;
-	width: 100%;
-	padding: 10px;
-	font-size: 28pt;
-	font-weight: 300;
+strong {
+  font-weight: bolder;
 }
-
-.ql-editor {
-	height: calc(100vh - 200px);
-}
-
-div.blurred-editor div.ql-toolbar {
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0s linear 500ms, opacity 500ms;
-}
-
-div.focused-editor div.ql-toolbar {
-	visibility: visible;
-	opacity: 1;
-	transition: visibility 0s linear 0s, opacity 500ms;
+ul {
+  padding-left: 20px;
+  li {
+    list-style: disc outside none;
+  }
 }
