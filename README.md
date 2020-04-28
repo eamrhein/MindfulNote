@@ -17,7 +17,7 @@ Mindfulnote note taking application based on the functionality of Evernote. It a
 + #### Frontend State: [Redux](https://redux.js.org/)
 
 ## Features
-<div style="display:flex;background-color: black;">
+<div style="display:flex;align-items: center;">
       <div>  
         <img src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="50%" />
     </div>
