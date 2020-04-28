@@ -20,15 +20,10 @@
 
 ## Features
 <div>
-  <style>
-    .feature {
-      display: flex;
-    }
-  </style>
-  <img align="center" src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="50% />
-  <span>
+    <span>
       Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.
   </span>
+  <img align="center" src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="50% />
 </div>
 
 <div style="display:flex;flex-direction:row;">
