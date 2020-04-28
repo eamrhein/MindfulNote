@@ -3,40 +3,62 @@
 <div align="center">
   <h1>Mindfulnote</h1>
 <a href="https://mindfull-note.herokuapp.com/">
-  <img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" width="500px" />
+  <img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" height="450px" />
 </a>
+<p>Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.</p>
 </div>
-<br />
-
-Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.
 
 ## Technologies
+
 + #### Database: [Postgresql](https://www.postgresql.org/)
+
 + #### Backend: [Ruby on Rails](https://rubyonrails.org/)
+
 + #### Frontend Components: [React](https://reactjs.org/)
+
 + #### Frontend State: [Redux](https://redux.js.org/)
 
 ## Features
-<div style="display:flex;justify-content: center;">
-      <div>  
-        <img src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="50%" />
-    </div>
-      <div>Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.</div>
+
+<div style="display:flex;flex-direction:row;">
+  <div style="margin-right:10px">  
+      <img src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" height="450px" />
+  </div>
+  <div style="max-width:300px;padding:10%;">
+      <li>Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.</li>
+  </div>
 </div>
 
-+ Rich-text editor that allows user to edit text
+<div style="display:flex;flex-direction:row;">
+  <div style="max-width:300px;padding:10%;">
+      <li>Rich-text editor that allows user to edit text</li>
+  </div>
+  <div>  
+      <img src="https://user-images.githubusercontent.com/1903468/65346960-d19dd200-db92-11e9-9c6d-2cd8a3adad8b.gif" height="450px" />
+  </div>>
+</div>
 
-<img src="https://user-images.githubusercontent.com/1903468/65346960-d19dd200-db92-11e9-9c6d-2cd8a3adad8b.gif" width="700px" />
-+ Organize Notes in notebook collections.
-<img src="https://user-images.githubusercontent.com/1903468/65346963-d2ceff00-db92-11e9-8fcc-93ff2650e812.gif" width="700px" />
+<div style="display:flex;flex-direction:row;">
+  <div style="margin-right:10px">  
+      <img src="https://user-images.githubusercontent.com/1903468/65346963-d2ceff00-db92-11e9-8fcc-93ff2650e812.gif" height="450px" />
+  </div>
+  <div style="max-width:300px;padding:10%;">
+      <li>Organize Notes in notebook collections.</li>
+  </div>
+</div>
 
-+ Tag Notes with Descriptive tags.
-
-![part5](https://user-images.githubusercontent.com/1903468/65347541-15dda200-db94-11e9-9c7f-9fb2af1c5761.gif)
+<div style="display:flex;flex-direction:row;">
+  <div style="max-width:300px;padding:10%;">
+      <li>Tag Notes with Descriptive tags.</li>
+  </div>
+  <div>  
+      <img src="https://user-images.githubusercontent.com/1903468/65347541-15dda200-db94-11e9-9c7f-9fb2af1c5761.gif" height="450px" />
+  </div>>
+</div>
 
 ## Code Features
 
-#### Auto Saving using an Async callback event handler.
+#### Auto Saving using an Async callback event handler
 
 ```javascript
 
