@@ -6,10 +6,9 @@
   <img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" width="500px" />
 </a>
 </div>
+<br />
 
 Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.
-
-<br />
 
 ## Technologies
 + #### Database: [Postgresql](https://www.postgresql.org/)
