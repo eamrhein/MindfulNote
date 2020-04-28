@@ -17,7 +17,7 @@ Mindfulnote note taking application based on the functionality of Evernote. It a
 + #### Frontend State: [Redux](https://redux.js.org/)
 
 ## Features
-<div align="center">
+<div align="center" width="50%">
       <div>  <img src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="100%" /> </div>
       <div>Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.</div>
 </div>
