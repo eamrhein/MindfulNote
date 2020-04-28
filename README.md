@@ -16,16 +16,14 @@ Mindfulnote note taking application based on the functionality of Evernote. It a
 
 ## Features
 + Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.
-<img src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="500px" />
-![part3](https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif)
+
+<img src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="700px" />
 
 + Rich-text editor that allows user to edit text
 
-![Part4](https://user-images.githubusercontent.com/1903468/65346960-d19dd200-db92-11e9-9c6d-2cd8a3adad8b.gif)
-
+<img src="https://user-images.githubusercontent.com/1903468/65346960-d19dd200-db92-11e9-9c6d-2cd8a3adad8b.gif" width="700px" />
 + Organize Notes in notebook collections.
-
-![part4](https://user-images.githubusercontent.com/1903468/65346963-d2ceff00-db92-11e9-8fcc-93ff2650e812.gif)
+<img src="https://user-images.githubusercontent.com/1903468/65346963-d2ceff00-db92-11e9-8fcc-93ff2650e812.gif" width="700px" />
 
 + Tag Notes with Descriptive tags.
 
