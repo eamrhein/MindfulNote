@@ -1,12 +1,14 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<br />
+<a align="center" href="https://mindfull-note.herokuapp.com/">
+  <img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" width="500px" />
+</a>
+<br />
+
 # Mindfulnote
 
 Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<a align="center" href="https://mindfull-note.herokuapp.com/">
-<img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" width="500px" />
-</a>
-<br />
 
 ## Technologies
 + #### Database: [Postgresql](https://www.postgresql.org/)
