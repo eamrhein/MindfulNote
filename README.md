@@ -19,40 +19,14 @@
 + #### Frontend State: [Redux](https://redux.js.org/)
 
 ## Features
-<div>
-    <span>
-      Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.
-  </span>
-  <div width="500px" />
-  <img align="center" src="https://user-images.githubusercontent.com/1903468/65346957-d06ca500-db92-11e9-9e22-b424c0a40d19.gif" width="50% />
-</div>
 
-<div style="display:flex;flex-direction:row;">
-  <div style="max-width:300px;padding:10%;">
-      <li>Rich-text editor that allows user to edit text</li>
-  </div>
-  <div>  
-      <img src="https://user-images.githubusercontent.com/1903468/65346960-d19dd200-db92-11e9-9c6d-2cd8a3adad8b.gif" height="450px" />
-  </div>>
-</div>
++ Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.
 
-<div style="display:flex;flex-direction:row;">
-  <div style="margin-right:10px">  
-      <img src="https://user-images.githubusercontent.com/1903468/65346963-d2ceff00-db92-11e9-8fcc-93ff2650e812.gif" height="450px" />
-  </div>
-  <div style="max-width:300px;padding:10%;">
-      <li>Organize Notes in notebook collections.</li>
-  </div>
-</div>
++ Rich-text editor that allows user to edit text
 
-<div style="display:flex;flex-direction:row;">
-  <div style="max-width:300px;padding:10%;">
-      <li>Tag Notes with Descriptive tags.</li>
-  </div>
-  <div>  
-      <img src="https://user-images.githubusercontent.com/1903468/65347541-15dda200-db94-11e9-9c7f-9fb2af1c5761.gif" height="450px" />
-  </div>>
-</div>
++ Organize Notes in notebook collections
+
++Tag Notes with Descriptive tags.
 
 ## Code Features
 
