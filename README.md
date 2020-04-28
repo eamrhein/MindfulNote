@@ -26,7 +26,7 @@
 
 + Organize Notes in notebook collections
 
-+Tag Notes with Descriptive tags.
++ Tag Notes with Descriptive tags.
 
 ## Code Features
 
