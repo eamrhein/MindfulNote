@@ -1,12 +1,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+# Mindfulnote
+
 <div align="center">
 <a href="https://mindfull-note.herokuapp.com/">
   <img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" width="500px" />
 </a>
 </div>
-
-# Mindfulnote
 
 Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.
 
