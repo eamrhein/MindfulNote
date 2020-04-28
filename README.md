@@ -9,6 +9,8 @@
 
 Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.
 
+<br />
+
 ## Technologies
 + #### Database: [Postgresql](https://www.postgresql.org/)
 + #### Backend: [Ruby on Rails](https://rubyonrails.org/)
