@@ -1,11 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<div align="center">
-  <h1>Mindfulnote</h1>
-<a href="https://mindfull-note.herokuapp.com/">
-  <img src="https://user-images.githubusercontent.com/1903468/65346879-a61ae780-db92-11e9-9e43-8543c7f9f42b.gif" height="450px" />
-</a>
-<p>Mindfulnote note taking application based on the functionality of Evernote. It allows people to record notes and organize them.</p>
+# Mindfulnote
+## An Evernote clone built on React/Redux, Ruby on Rails and hosted on Heroku
+### Live Site: https://mindfull-note.herokuapp.com/
+<div>
+  <p>Mindfulnote is a note taking website that allows users to take notes and create written documents. It was built in 2 weeks.</p>
+  <p>User's can create notes, edit notes, create notebooks to organize notes and tag them to help with organization. </p>
 </div>
 
 ## Technologies
