@@ -8,6 +8,20 @@
   <p>User's can create notes, edit notes, create notebooks to organize notes and tag them to help with organization. </p>
 </div>
 
+## Key Features
++ Notes
+  + Create and Edit notes in real time.
+  + Documents are already Saved
+  + Rich Text
++ Notebooks
+   + Organize Notes By Notebooks.
+   + Can Be deleted.
++ Tags
+  + Notes can be tagged with a label to better organize them
++ User Authentication
+  + Users can create a new account or login with an existing one.
+  + Password are hashed using bcrypt and errors are rendered when a form is filled in incorrectly
+
 ## Technologies
 
 + #### Database: [Postgresql](https://www.postgresql.org/)
@@ -17,16 +31,6 @@
 + #### Frontend Components: [React](https://reactjs.org/)
 
 + #### Frontend State: [Redux](https://redux.js.org/)
-
-## Features
-
-+ Secure user authentication built with rails and BCrypt. passwords are salted and hashed preventing password data from being compromised.
-
-+ Rich-text editor that allows user to edit text
-
-+ Organize Notes in notebook collections
-
-+ Tag Notes with Descriptive tags.
 
 ## Code Features
 
