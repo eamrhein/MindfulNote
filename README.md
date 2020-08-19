@@ -3,10 +3,10 @@
 # Mindfulnote
 ## An Evernote clone built on React/Redux, Ruby on Rails and hosted on Heroku
 ### Live Site: https://mindfull-note.herokuapp.com/
-<div>
-  <p>Mindfulnote is a note taking website that allows users to take notes and create written documents. It was built in 2 weeks.</p>
-  <p>User's can create notes, edit notes, create notebooks to organize notes and tag them to help with organization. </p>
-</div>
+![Welcome](/readme_media/Welcome.png)
+Mindfulnote is a note taking website that allows users to take notes and create written documents. It was built in 2 weeks.
+User's can create notes, edit notes, create notebooks to organize notes and tag them to help with organization.
+
 
 ## Key Features
 + Notes
